@@ -1,0 +1,38 @@
+.main {
+  background-image: linear-gradient(rgba(0, 15, 0, 0.8), rgba(0, 15, 0, 0.8)),
+    url('../../assets/clem-onojeghuo-r8lDTtSWGUc-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.center {
+  left: 0;
+  margin-top: -100px;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+}
+
+.center .name {
+  font-size: 76px;
+  color: #fff;
+  font-weight: 900;
+  display: block;
+}
+
+.center .contact-info {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.center .contact-info * {
+  display: block;
+  padding: 10px 0;
+}
