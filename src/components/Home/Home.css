@@ -1,6 +1,7 @@
 .main {
-  background-image: linear-gradient(rgba(0, 15, 0, 0.8), rgba(0, 15, 0, 0.8)),
-    url('../../assets/clem-onojeghuo-r8lDTtSWGUc-unsplash.jpg');
+  background-image: url('../../assets/clem-onojeghuo-r8lDTtSWGUc-unsplash.jpg');
+  background-color: #a4cfb4;
+  background-blend-mode: screen;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -21,14 +22,14 @@
 
 .center .name {
   font-size: 76px;
-  color: #fff;
+  color: #000;
   font-weight: 900;
   display: block;
 }
 
 .center .contact-info {
   font-size: 20px;
-  color: #fff;
+  color: #000;
   font-weight: 600;
 }
 
