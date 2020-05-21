@@ -10,6 +10,7 @@ declare global {
 class Contact extends Component {
   googleMapRef = React.createRef<HTMLDivElement>()
   googleMap : google.maps.Map<Element> | undefined;
+  marker : google.maps.Marker | undefined;
 
   createGoogleMap = () =>
     new window.google.maps.Map(this.googleMapRef.current as Element, {
@@ -21,6 +22,12 @@ class Contact extends Component {
       disableDefaultUI: true
     })
 
+  createMarker = () =>
+    new window.google.maps.Marker({
+      position: { lat: 51.098501, lng: -113.962162 },
+      map: this.googleMap,
+    })
+
   componentDidMount() {
     const googleMapScript = document.createElement('script');
 
@@ -30,6 +37,7 @@ class Contact extends Component {
 
     googleMapScript.addEventListener('load', () => {
       this.googleMap = this.createGoogleMap()
+      this.marker = this.createMarker()
     })
   }
 
