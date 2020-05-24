@@ -1,2 +1,15 @@
 .contact {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15%;
+}
+
+#google-map {
+  width: 400px;
+  height: 300px;
+  margin: auto;
+}
+
+.contact .header {
+  margin: auto;
 }
