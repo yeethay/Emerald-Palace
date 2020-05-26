@@ -28,14 +28,9 @@
   border-radius: 5px;
 }
 
-.days,
-.hours {
+.contact .ul {
   list-style-type: none;
   margin: 0;
-}
-
-.days {
-  padding: 0;
 }
 
 .times {
