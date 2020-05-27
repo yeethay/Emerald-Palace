@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.css';
 
 const Home = () => (
-  <div className="main">
+  <div className="home">
     <div className="center">
       <span className="name">EMERALD PALACE</span>
       <div className="contact-info">
