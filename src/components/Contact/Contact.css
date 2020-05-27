@@ -28,7 +28,7 @@
   border-radius: 5px;
 }
 
-.contact .ul {
+.contact ul {
   list-style-type: none;
   margin: 0;
 }
@@ -37,8 +37,13 @@
   display: flex;
 }
 
+.days {
+  padding: 0;
+}
+
 .contact span,
-ul {
+.contact a,
+.contact ul {
   font-size: 16px;
   font-weight: 600;
 }

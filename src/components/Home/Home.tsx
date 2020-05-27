@@ -6,8 +6,8 @@ const Home = () => (
     <div className="center">
       <span className="name">EMERALD PALACE</span>
       <div className="contact-info">
-        <span>55 CASTLERIDGE BLVD NE, CALGARY, AB T3J 3J8, CANADA</span>
-        <span>+1 (403) 568-2832</span>
+        <span>55 CASTLERIDGE BLVD NE, CALGARY, AB T3J 3J8</span>
+        <a href="tel:+1-403-568-2832">+1 (403) 568-2832</a>
       </div>
     </div>
   </div>

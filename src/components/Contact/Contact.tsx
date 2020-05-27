@@ -56,7 +56,7 @@ const Contact = () => {
             CALGARY, AB T3J 3J8
           </span>
           <h2>Contact</h2>
-          <span>+1 (403) 568-2832</span>
+          <a href="tel:+1-403-568-2832">+1 (403) 568-2832</a>
           <h2>Hours</h2>
           <div className="times">
             <ul className="days">
