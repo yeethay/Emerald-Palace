@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import menu from './menu.json';
 import './Menu.css';
 
 interface ICategory {
   name: string;
+  image: string;
   items: IItem[];
 }
 
@@ -14,14 +15,35 @@ interface IItem {
   price: number | number[];
 }
 
-const Menu = () => (
-  <div className="menu">
-    {menu.map((category: ICategory) => (
-      <div className="category" key={category.name}>
-        <h1>{category.name}</h1>
+const Menu = () => {
+  const [activeCategory, setActiveCategory] = useState<ICategory>(menu[0]);
+
+  return (
+    <div className="menu">
+      <div className="slider-container">
+        <div className="slider">
+          {menu.map((category: ICategory) => (
+            <div
+              key={category.name}
+              className="category"
+              style={{
+                backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${category.image})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+              }}
+              onClick={() => setActiveCategory(category)}
+            >
+              {category.name}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="active-category">
+        <h1>{activeCategory.name}</h1>
         <table>
           <tbody>
-            {category.items.some((item) => Array.isArray(item.price)) && (
+            {activeCategory.items.some((item) => Array.isArray(item.price)) && (
               <tr>
                 <th></th>
                 <th></th>
@@ -29,7 +51,7 @@ const Menu = () => (
                 <th>Large</th>
               </tr>
             )}
-            {category.items.map((item: IItem) => (
+            {activeCategory.items.map((item: IItem) => (
               <tr key={item.number}>
                 <td>{item.number}</td>
                 <td>
@@ -46,8 +68,8 @@ const Menu = () => (
           </tbody>
         </table>
       </div>
-    ))}
-  </div>
-);
+    </div>
+  );
+};
 
 export default Menu;

@@ -38,6 +38,46 @@
   padding: 10%;
 }
 
-.menu .inner {
-  background-color: red;
+.menu .slider-container {
+  position: absolute;
+  margin: auto;
+  top: 3%;
+  bottom: 77%;
+  left: 0;
+  right: 0;
+  padding: 1rem 30%;
+}
+
+.menu .slider {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(14, minmax(200px, 1fr));
+  overflow: scroll;
+  height: 100%;
+}
+
+.menu .slider > * {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  font-weight: 900;
+}
+
+.menu .active-category {
+  position: absolute;
+  margin: auto 30%;
+  top: 25%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.menu .active-category:after {
+  content: '';
+  display: block;
+  height: 80px;
+  width: 100%;
 }

@@ -1,6 +1,7 @@
 [
   {
     "name": "Appetizers",
+    "image": "images/appetizers.jpg",
     "items": [
       {
         "number": "1",
@@ -51,6 +52,7 @@
   },
   {
     "name": "Soup",
+    "image": "images/soup.jpg",
     "items": [
       {
         "number": "10",
@@ -88,6 +90,7 @@
   },
   {
     "name": "Seafood",
+    "image": "images/seafood.jpg",
     "items": [
       {
         "number": "16",
@@ -213,6 +216,7 @@
   },
   {
     "name": "Sizzling Rice",
+    "image": "images/sizzling-rice.jpg",
     "items": [
       {
         "number": "36",
@@ -248,6 +252,7 @@
   },
   {
     "name": "Pork",
+    "image": "images/pork.jpg",
     "items": [
       {
         "number": "41",
@@ -283,6 +288,7 @@
   },
   {
     "name": "Chicken",
+    "image": "images/chicken.jpg",
     "items": [
       {
         "number": "46a",
@@ -378,6 +384,7 @@
   },
   {
     "name": "Beef",
+    "image": "images/beef.jpg",
     "items": [
       {
         "number": "60",
@@ -449,6 +456,7 @@
   },
   {
     "name": "Vegetables and Bean Curd",
+    "image": "images/vegetables.jpg",
     "items": [
       {
         "number": "71",
@@ -508,6 +516,7 @@
   },
   {
     "name": "Hot Pots and Hot Plates",
+    "image": "images/hot-pot.jpg",
     "items": [
       {
         "number": "81",
@@ -579,6 +588,7 @@
   },
   {
     "name": "Noodles",
+    "image": "images/noodles.jpg",
     "items": [
       {
         "number": "92",
@@ -626,6 +636,7 @@
   },
   {
     "name": "Fried Rice",
+    "image": "images/fried-rice.jpg",
     "items": [
       {
         "number": "98",
@@ -684,6 +695,7 @@
   },
   {
     "name": "Chop Suey",
+    "image": "images/chop-suey.jpg",
     "items": [
       {
         "number": "107",
@@ -725,6 +737,7 @@
   },
   {
     "name": "Egg Foo Yung",
+    "image": "images/egg-foo-yung.jpg",
     "items": [
       {
         "number": "113",
@@ -754,6 +767,7 @@
   },
   {
     "name": "House Specials",
+    "image": "images/house-specials.jpg",
     "items": [
       {
         "number": "251",
