@@ -1,5 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import menu from './menu.json';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faChevronLeft,
+  faChevronRight,
+} from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 
 interface ICategory {
@@ -17,11 +22,21 @@ interface IItem {
 
 const Menu = () => {
   const [activeCategory, setActiveCategory] = useState<ICategory>(menu[0]);
+  const sliderRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (amount: number) =>
+    sliderRef.current?.scrollTo({
+      left: sliderRef.current.scrollLeft + amount,
+      behavior: 'smooth',
+    });
 
   return (
     <div className="menu">
       <div className="slider-container">
-        <div className="slider">
+        <div className="left" onClick={() => scroll(-300)}>
+          <FontAwesomeIcon icon={faChevronLeft} size="lg" />
+        </div>
+        <div ref={sliderRef} className="slider">
           {menu.map((category: ICategory) => (
             <div
               key={category.name}
@@ -37,6 +52,9 @@ const Menu = () => {
               {category.name}
             </div>
           ))}
+        </div>
+        <div className="right" onClick={() => scroll(300)}>
+          <FontAwesomeIcon icon={faChevronRight} size="lg" />
         </div>
       </div>
       <div className="active-category">
@@ -55,8 +73,10 @@ const Menu = () => {
               <tr key={item.number}>
                 <td>{item.number}</td>
                 <td>
-                  <div>{item.name}</div>
-                  <div className="description">{item.description}</div>
+                  <div className="name-description">
+                    <div>{item.name}</div>
+                    <div className="description">{item.description}</div>
+                  </div>
                 </td>
                 {Array.isArray(item.price) ? (
                   item.price.map((p) => <td key={p}>{p}</td>)
