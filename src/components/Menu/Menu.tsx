@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import menu from './menu.json';
+import takeoutMenu from './takeout-menu.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
@@ -11,17 +11,25 @@ interface ICategory {
   name: string;
   image: string;
   items: IItem[];
+  entrees?: IEntree[];
+}
+
+interface IEntree {
+  number: string;
+  name: string;
 }
 
 interface IItem {
-  number: string;
+  number?: string;
   name: string;
   description?: string;
   price: number | number[];
 }
 
 const Menu = () => {
-  const [activeCategory, setActiveCategory] = useState<ICategory>(menu[0]);
+  const [activeCategory, setActiveCategory] = useState<ICategory>(
+    takeoutMenu[0]
+  );
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const scroll = (amount: number) =>
@@ -37,9 +45,9 @@ const Menu = () => {
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
         </div>
         <div ref={sliderRef} className="slider">
-          {menu.map((category: ICategory) => (
+          {takeoutMenu.map((category: ICategory, index) => (
             <div
-              key={category.name}
+              key={index}
               className="category"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${category.image})`,
@@ -69,9 +77,9 @@ const Menu = () => {
                 <th>Large</th>
               </tr>
             )}
-            {activeCategory.items.map((item: IItem) => (
-              <tr key={item.number}>
-                <td>{item.number}</td>
+            {activeCategory.items.map((item: IItem, index) => (
+              <tr key={index}>
+                {item.number && <td>{item.number}</td>}
                 <td>
                   <div className="name-description">
                     <div>{item.name}</div>
@@ -79,7 +87,7 @@ const Menu = () => {
                   </div>
                 </td>
                 {Array.isArray(item.price) ? (
-                  item.price.map((p) => <td key={p}>{p}</td>)
+                  item.price.map((p, index) => <td key={index}>{p}</td>)
                 ) : (
                   <td>{item.price}</td>
                 )}
@@ -87,6 +95,21 @@ const Menu = () => {
             ))}
           </tbody>
         </table>
+        {activeCategory.name === 'Dinner Specials' && (
+          <>
+            <h1>Entrées</h1>
+            <table>
+              <tbody>
+                {activeCategory.entrees?.map((entree: IEntree, index) => (
+                  <tr key={index}>
+                    <td>{entree.number}</td>
+                    <td>{entree.name}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </>
+        )}
       </div>
     </div>
   );

@@ -823,5 +823,114 @@
         "price": 14.95
       }
     ]
+  },
+  {
+    "name": "Dinner Specials",
+    "image": "/images/dinner-specials.jpg",
+    "items": [
+      {
+        "name": "Dinner for 1",
+        "description": "Spring Roll, Chicken Fried Rice, Pan Fried Mixed Vegetables, and Ginger Beef",
+        "price": 15.95
+      },
+      {
+        "name": "Dinner for 2",
+        "description": "Two Spring Rolls, Wonton Soup, Chicken Fried Rice, and select two entrées",
+        "price": 39.95
+      },
+      {
+        "name": "Dinner for 3",
+        "description": "Three Spring Rolls, Wonton Soup, Chicken Fried Rice, and select three entrées",
+        "price": 59.95
+      },
+      {
+        "name": "Dinner for 4",
+        "description": "Four Deep Fried Spring Rolls, Wonton Soup, Chicken Fried Rice, and select four entrées",
+        "price": 78.95
+      },
+      {
+        "name": "Dinner for 6",
+        "description": "Six Deep Fried Spring Rolls, Two Wonton Soups, Two Chicken Fried Rice, and ",
+        "price": 119.85
+      }
+    ],
+    "entrees": [
+      {
+        "number": "E1",
+        "name": "Pork Dumplings (10)"
+      },
+      {
+        "number": "E6",
+        "name": "Salt & Pepper Fried Spareribs"
+      },
+      {
+        "number": "E42",
+        "name": "Sweet & Sour Pork"
+      },
+      {
+        "number": "E49",
+        "name": "Fried Chicken in Lemon Sauce"
+      },
+      {
+        "number": "E51",
+        "name": "Almond Gai Ding Chicken"
+      },
+      {
+        "number": "E52",
+        "name": "Sweet & Sour Chicken"
+      },
+      {
+        "number": "E53",
+        "name": "Sweet & Sour Chicken Balls"
+      },
+      {
+        "number": "E55",
+        "name": "Chicken with Mixed Vegetables"
+      },
+      {
+        "number": "E58",
+        "name": "Ginger Chicken"
+      },
+      {
+        "number": "E60",
+        "name": "Ginger Beef"
+      },
+      {
+        "number": "E61",
+        "name": "Beef & Broccoli"
+      },
+      {
+        "number": "E64",
+        "name": "Beef with Black Bean Sauce"
+      },
+      {
+        "number": "E69",
+        "name": "Beef with Mixed Vegetables"
+      },
+      {
+        "number": "E75",
+        "name": "Pan Fried Mixed Vegetables"
+      },
+      {
+        "number": "E92",
+        "name": "Shanghai Fried Thick Noodles"
+      },
+      {
+        "number": "E95",
+        "name": "Cantonese Crispy Thin Noodles"
+      },
+      {
+        "number": "E96",
+        "name": "Chicken Crispy Thin Noodles"
+      },
+      {
+        "number": "E96A",
+        "name": "Beef Crispy Thin Noodles"
+      },
+      {
+        "number": "E108",
+        "name": "Chicken Chop Suey"
+      }
+    ]
   }
 ]
