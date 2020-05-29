@@ -130,7 +130,7 @@
       {
         "number": "136",
         "name": { "en": "Crab Meat & Shark's Fin Soup", "zh": "", "vi": "" },
-        "price": "68.0"
+        "price": "68.00"
       },
       {
         "number": "137",
@@ -139,7 +139,7 @@
           "zh": "",
           "vi": ""
         },
-        "price": "68.0"
+        "price": "68.00"
       }
     ]
   },

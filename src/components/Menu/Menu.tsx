@@ -45,7 +45,7 @@ const Menu = () => {
   return (
     <div className="menu">
       <div className="slider-container">
-        <div className="left" onClick={() => scroll(-300)}>
+        <div className="left" onClick={() => scroll(-500)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
         </div>
         <div ref={sliderRef} className="slider">
@@ -65,7 +65,7 @@ const Menu = () => {
             </div>
           ))}
         </div>
-        <div className="right" onClick={() => scroll(300)}>
+        <div className="right" onClick={() => scroll(500)}>
           <FontAwesomeIcon icon={faChevronRight} size="lg" />
         </div>
       </div>
@@ -75,9 +75,9 @@ const Menu = () => {
           <tbody>
             {activeCategory.items.map((item: IItem, index) => (
               <tr key={index}>
-                <td>{item.number}</td>
-                <td style={{ padding: '5px 0' }}>{item.name[language]}</td>
-                <td style={{ textAlign: 'right' }}>{item.price}</td>
+                <td className="number">{item.number}</td>
+                <td className="name">{item.name[language]}</td>
+                <td className="price">{item.price}</td>
               </tr>
             ))}
           </tbody>
