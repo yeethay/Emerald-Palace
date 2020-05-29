@@ -1,0 +1,920 @@
+[
+  {
+    "name": {
+      "en": "Appetizers",
+      "zh": "",
+      "vi": ""
+    },
+    "image": "images/appetizers.jpg",
+    "items": [
+      {
+        "number": "121",
+        "name": {
+          "en": "Jelly Fish with Sesame Oil & Hot Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "18.95"
+      },
+      {
+        "number": "122",
+        "name": {
+          "en": "Vietnamese Style Pork Feet & Jelly Fish",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "123",
+        "name": {
+          "en": "Shredded Duck with Jelly Fish",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "125",
+        "name": {
+          "en": "Japanese Style Salad Jelly Fish & Octopus",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "18.95"
+      },
+      {
+        "number": "126",
+        "name": {
+          "en": "Mixed Meat Plate",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "30.95"
+      },
+      {
+        "number": "127",
+        "name": {
+          "en": "Japanese Style Seafood Plate",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "36.95"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Soup", "zh": "", "vi": "" },
+    "image": "images/soup.jpg",
+    "items": [
+      {
+        "number": "128",
+        "name": {
+          "en": "Salty Egg, Mustard Vegetable & Sliced Meat Soup",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "129",
+        "name": {
+          "en": "White Pepper, Preserved Vegetable & Pork Belly Soup",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "130",
+        "name": {
+          "en": "Enoki, Peas Leave & Minced Beef Soup",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "131",
+        "name": { "en": "Crab Meat Fish Maw Soup", "zh": "", "vi": "" },
+        "price": "12.95"
+      },
+      {
+        "number": "132",
+        "name": { "en": "Sea Food Soup", "zh": "", "vi": "" },
+        "price": "12.95"
+      },
+      {
+        "number": "133",
+        "name": { "en": "Enoki, Dry Scallop Soup", "zh": "", "vi": "" },
+        "price": "12.95"
+      },
+      {
+        "number": "134",
+        "name": {
+          "en": "Crab Meat, Shark's Fin & Seafood Soup (for One)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "20.95"
+      },
+      {
+        "number": "135",
+        "name": {
+          "en": "Shark's Fin Soup with Fresh Crab Meat",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "30.95"
+      },
+      {
+        "number": "136",
+        "name": { "en": "Crab Meat & Shark's Fin Soup", "zh": "", "vi": "" },
+        "price": "68.0"
+      },
+      {
+        "number": "137",
+        "name": {
+          "en": "Crab Meat, Shark's Fin & Seafood Soup",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "68.0"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Live Seafood", "zh": "", "vi": "" },
+    "image": "/images/live-seafood.jpg",
+    "items": [
+      {
+        "number": "139",
+        "name": {
+          "en": "Lobster (Steamed, Creamy Sauce, Garlic Sauce, ...)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "Current Price"
+      },
+      {
+        "number": "140",
+        "name": {
+          "en": "Crab (Ginger & Onion, Steamed, Hong Kong Style)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "Current Price"
+      },
+      {
+        "number": "141",
+        "name": {
+          "en": "Pickerel or Tilapia Fish (Steamed, Deep Fried)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "Current Price"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Seafood", "zh": "", "vi": "" },
+    "image": "/images/seafood.jpg",
+    "items": [
+      {
+        "number": "146",
+        "name": {
+          "en": "Fried Fish Fillet in Sweet & Salad Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "15.95"
+      },
+      {
+        "number": "147",
+        "name": {
+          "en": "Salt & Pepper Squid",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "15.95"
+      },
+      {
+        "number": "148",
+        "name": {
+          "en": "Quick Fried Fish Fillet & Sugar Pea",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "15.95"
+      },
+      {
+        "number": "149",
+        "name": {
+          "en": "Sesame Style Prawns",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "150",
+        "name": {
+          "en": "Pan Fried 3 Kinds of Seafood & in XO Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      },
+      {
+        "number": "151",
+        "name": {
+          "en": "Deep Fried Prawn with Walnut in Salad Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "18.95"
+      },
+      {
+        "number": "152",
+        "name": {
+          "en": "Salt & Pepper 3 Kinds of Seafood (Sh, Sq & Scallop)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Chicken", "zh": "", "vi": "" },
+    "image": "/images/chicken.jpg",
+    "items": [
+      {
+        "number": "153",
+        "name": {
+          "en": "Crispy Fried Chicken",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "154",
+        "name": {
+          "en": "Crispy Fried Chicken with Garlic",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "155",
+        "name": {
+          "en": "House Special Chicken (Cold)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      },
+      {
+        "number": "156",
+        "name": {
+          "en": "House Special Chicken with Ginger, Onion & Pepper (Cold)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Pork & Beef", "zh": "", "vi": "" },
+    "image": "/images/pork-and-beef.jpg",
+    "items": [
+      {
+        "number": "157",
+        "name": {
+          "en": "Pineapple Sweet and Sour Pork",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "159",
+        "name": {
+          "en": "Peking Style Pork Chop with Salad Dressing",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "160",
+        "name": {
+          "en": "Stir Fried Beef with Two Kinds of Mushrooms",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Hot Pot", "zh": "", "vi": "" },
+    "image": "/images/hot-pot.jpg",
+    "items": [
+      {
+        "number": "162",
+        "name": {
+          "en": "Egg Plant & Salty Fish Hot Pot",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "15.95"
+      },
+      {
+        "number": "163",
+        "name": {
+          "en": "Sliced Beef with Ginger & Green Onion Hot Pot",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "15.95"
+      },
+      {
+        "number": "164",
+        "name": {
+          "en": "House Special Hot Pot",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "165",
+        "name": {
+          "en": "House Special Fish Hot Pot",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "15.95"
+      },
+      {
+        "number": "166",
+        "name": {
+          "en": "Egg Plant, Salty Fish & Taiwan Egg Bean Curd Hot Pot",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "167",
+        "name": {
+          "en": "Black Pepper Beef Hot Plate",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "266",
+        "name": {
+          "en": "Preserved Meat, Fish Tendon with Mushroom Hot Pot",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "22.95"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Vegetables", "zh": "", "vi": "" },
+    "image": "/images/vegetables.jpg",
+    "items": [
+      {
+        "number": "169",
+        "name": {
+          "en": "Egg Bean Curd in Taiwanese Style",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      },
+      {
+        "number": "170",
+        "name": {
+          "en": "Stir Fried Water Lily with Preserved Beancurd",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      },
+      {
+        "number": "171",
+        "name": {
+          "en": "Mushroom, Bean Curd with Baby Pok Choy",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "172",
+        "name": {
+          "en": "Vegetarian Delight",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "173",
+        "name": {
+          "en": "Beef with Chinese Broccoli in XO Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "174",
+        "name": {
+          "en": "Pan Fried Bailing Mushroom on Snow Peas Leaf",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "19.95"
+      },
+      {
+        "number": "175",
+        "name": {
+          "en": "Pan Fried Crab Meat on Snow Peas Leaf",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "19.95"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Peking Duck", "zh": "", "vi": "" },
+    "image": "/images/peking-duck.jpg",
+    "items": [
+      {
+        "number": "176",
+        "name": {
+          "en": "One Course",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "32.95"
+      },
+      {
+        "number": "",
+        "name": {
+          "en": "Two Courses",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "37.95"
+      },
+      {
+        "number": "",
+        "name": {
+          "en": "Three Courses",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "42.95"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Noodle & Rice", "zh": "", "vi": "" },
+    "image": "/images/noodle-and-rice.jpg",
+    "items": [
+      {
+        "number": "177",
+        "name": {
+          "en": "Shanghai Fried Noodle",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "178",
+        "name": {
+          "en": "Stir Fried Beef with Flat Rice Noodle",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "179",
+        "name": {
+          "en": "Stir Fried Beef with Flat Rice Noodle in Black Bean Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "180",
+        "name": {
+          "en": "Thai Style Stir Fried Flat Rice Noodle",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "181",
+        "name": {
+          "en": "Singapore Style Stir Fried Curry Rice Noodle",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "182",
+        "name": {
+          "en": "Mixed Meat with Vegetables on Fried Rice",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "183",
+        "name": {
+          "en": "Stir Fried Seafood Noodle",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "15.95"
+      },
+      {
+        "number": "184",
+        "name": {
+          "en": "Yang Chow Fried Rice",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "185",
+        "name": {
+          "en": "Home Style Stir Fried Meat with Rice Noodle",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "186",
+        "name": {
+          "en": "Stir Fried Yee Mein",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "187",
+        "name": {
+          "en": "Salty Fish & Chicken Fried Rice",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "187",
+        "name": {
+          "en": "Salty Fish & Chicken Fried Rice",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "188",
+        "name": {
+          "en": "Snow White Fried Rice (Dried Scallop)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      },
+      {
+        "number": "189",
+        "name": {
+          "en": "Seafood Fried Rice with XO Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      },
+      {
+        "number": "190",
+        "name": {
+          "en": "Japanese Style Seafood on Rice",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      },
+      {
+        "number": "191",
+        "name": {
+          "en": "Fried Rice with Mixed Meat & Vegetables on Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      }
+    ]
+  },
+  {
+    "name": { "en": "Late Night Snack", "zh": "", "vi": "" },
+    "image": "/images/late-night-snack.jpg",
+    "items": [
+      {
+        "number": "361",
+        "name": {
+          "en": "Fish Congee",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "8.95"
+      },
+      {
+        "number": "362",
+        "name": {
+          "en": "Clam Congee",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "9.95"
+      },
+      {
+        "number": "363",
+        "name": {
+          "en": "Chicken & Mushroom Congee",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "7.95"
+      },
+      {
+        "number": "365",
+        "name": {
+          "en": "Shredded Pork with Preserved Egg Congee",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "7.95"
+      },
+      {
+        "number": "367",
+        "name": {
+          "en": "Seafood Congee",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "9.95"
+      },
+      {
+        "number": "368",
+        "name": {
+          "en": "Chiu Chow Style Oyster Congee",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "10.95"
+      },
+      {
+        "number": "342",
+        "name": {
+          "en": "Chiu Chow Style Pan Fried Oyster & Egg",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "344",
+        "name": {
+          "en": "Salt & Pepper Tiny White Fish",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "345",
+        "name": {
+          "en": "Salt & Pepper Japanese Fish",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "13.95"
+      },
+      {
+        "number": "346",
+        "name": {
+          "en": "Crispy Fried Pork Intestine",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "12.95"
+      },
+      {
+        "number": "355",
+        "name": {
+          "en": "Pan Fried Red Sole Fish in Soy Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "Current Price"
+      },
+      {
+        "number": "356",
+        "name": {
+          "en": "BBQ Pork Neck with Steamed Bun",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      },
+      {
+        "number": "358",
+        "name": {
+          "en": "XO Sauce Beef Short Ribs",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      },
+      {
+        "number": "326",
+        "name": {
+          "en": "Clams in Black Bean Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      },
+      {
+        "number": "276",
+        "name": {
+          "en": "Spicy Clams Hot Pot",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      },
+      {
+        "number": "268",
+        "name": {
+          "en": "Satay Beef Short Ribs",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      },
+      {
+        "number": "263",
+        "name": {
+          "en": "Green Beans with Ground Pork in XO Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "14.95"
+      },
+      {
+        "number": "270",
+        "name": {
+          "en": "Goose Feet, Sliced Top Shell & Mushroom",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "24.95"
+      },
+      {
+        "number": "279",
+        "name": {
+          "en": "Deep Fried Shrimp with Salty Egg Yolk",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "280",
+        "name": {
+          "en": "Prawns & Mushroom in Black Pepper Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "16.95"
+      },
+      {
+        "number": "267",
+        "name": {
+          "en": "Pan Fried Jackfish with Maggie Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "18.95"
+      },
+      {
+        "number": "273",
+        "name": {
+          "en": "BBQ Eggplants with Shrimp Paste",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      },
+      {
+        "number": "271",
+        "name": {
+          "en": "Fried 3 Kinds of Onion with Sliced Lamb",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "17.95"
+      },
+      {
+        "number": "281",
+        "name": {
+          "en": "Fried Soft Shell Crab with Salt Egg Yolk",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "20.95"
+      },
+      {
+        "number": "282",
+        "name": {
+          "en": "Lamb Hot Pot",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "24.95"
+      },
+      {
+        "number": "283",
+        "name": {
+          "en": "Shrimp Egg Tofu with Broccoli",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "18.95"
+      },
+      {
+        "number": "119",
+        "name": {
+          "en": "Shrimp Ball",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "4.95"
+      },
+      {
+        "number": "120",
+        "name": {
+          "en": "Crab Claw (Shrimp Ball)",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "6.95"
+      },
+      {
+        "number": "277",
+        "name": {
+          "en": "Abalone in Oyster Sauce",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "56.95"
+      },
+      {
+        "number": "118",
+        "name": {
+          "en": "Deep Fried Marinated Pigeon",
+          "zh": "",
+          "vi": ""
+        },
+        "price": "Current Price"
+      }
+    ]
+  }
+]

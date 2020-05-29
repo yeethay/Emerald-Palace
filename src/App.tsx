@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Menu from './components/Menu/Menu';
+import TakeoutMenu from './components/Menu/TakeoutMenu';
 import Contact from './components/Contact/Contact';
 import './App.css';
 
@@ -19,6 +20,9 @@ function App() {
             </Route>
             <Route path="/menu">
               <Menu />
+            </Route>
+            <Route path="/takeout-menu">
+              <TakeoutMenu />
             </Route>
             <Route path="/contact">
               <Contact />

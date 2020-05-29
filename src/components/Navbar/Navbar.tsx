@@ -19,6 +19,9 @@ const Navbar = () => {
         <div className="nav-item">ABOUT</div>
       </Link>
       <Link to="menu">
+        <div className="nav-item">MENU</div>
+      </Link>
+      <Link to="takeout-menu">
         <div className="nav-item">T/O MENU</div>
       </Link>
       <Link to="contact">

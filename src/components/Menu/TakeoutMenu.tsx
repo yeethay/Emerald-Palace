@@ -1,38 +1,32 @@
 import React, { useState, useRef } from 'react';
+import menu from './takeout-menu.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
-import menu from './menu.json';
 import './Menu.css';
 
 interface ICategory {
-  name: IMultiLanguageName;
+  name: string;
   image: string;
   items: IItem[];
+  entrees?: IEntree[];
 }
 
-interface IMultiLanguageName {
-  en: string;
-  zh: string;
-  vi: string;
+interface IEntree {
+  number: string;
+  name: string;
 }
 
 interface IItem {
-  number: string;
-  name: IMultiLanguageName;
-  price: string;
+  number?: string;
+  name: string;
+  description?: string;
+  price: string | string[];
 }
 
-enum Languages {
-  ENGLISH = 'en',
-  CHINESE = 'zh',
-  VIETNAMESE = 'vi',
-}
-
-const Menu = () => {
-  const [language, setLanguage] = useState(Languages.ENGLISH);
+const TakeoutMenu = () => {
   const [activeCategory, setActiveCategory] = useState<ICategory>(menu[0]);
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -61,7 +55,7 @@ const Menu = () => {
               }}
               onClick={() => setActiveCategory(category)}
             >
-              {category.name[language]}
+              {category.name}
             </div>
           ))}
         </div>
@@ -70,21 +64,53 @@ const Menu = () => {
         </div>
       </div>
       <div className="active-category">
-        <h1>{activeCategory.name[language]}</h1>
+        <h1>{activeCategory.name}</h1>
         <table>
           <tbody>
+            {activeCategory.items.some((item) => Array.isArray(item.price)) && (
+              <tr>
+                <th></th>
+                <th></th>
+                <th>Small</th>
+                <th>Large</th>
+              </tr>
+            )}
             {activeCategory.items.map((item: IItem, index) => (
               <tr key={index}>
-                <td>{item.number}</td>
-                <td style={{ padding: '5px 0' }}>{item.name[language]}</td>
-                <td style={{ textAlign: 'right' }}>{item.price}</td>
+                {item.number && <td>{item.number}</td>}
+                <td>
+                  <div className="name-description">
+                    <div>{item.name}</div>
+                    <div className="description">{item.description}</div>
+                  </div>
+                </td>
+                {Array.isArray(item.price) ? (
+                  item.price.map((p, index) => <td key={index}>{p}</td>)
+                ) : (
+                  <td>{item.price}</td>
+                )}
               </tr>
             ))}
           </tbody>
         </table>
+        {activeCategory.name === 'Dinner Specials' && (
+          <>
+            <h1>Entrées</h1>
+            <table>
+              <tbody>
+                {activeCategory.entrees?.map((entree: IEntree, index) => (
+                  <tr key={index}>
+                    <td>{entree.number}</td>
+                    <td>{entree.name}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </>
+        )}
       </div>
     </div>
   );
 };
 
-export default Menu;
+export default TakeoutMenu;
