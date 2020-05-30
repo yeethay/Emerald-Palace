@@ -1,6 +1,5 @@
 .menu {
   padding: 50px;
-  margin-top: 50px;
 }
 
 .menu table {
@@ -29,8 +28,8 @@
 .menu .slider-container {
   position: absolute;
   margin: auto;
-  top: 3%;
-  bottom: 77%;
+  top: 5%;
+  bottom: 76%;
   left: 0;
   right: 0;
   padding: 1rem 25%;

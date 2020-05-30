@@ -11,21 +11,21 @@ interface IProps {
 const Banner = (props: IProps) => {
   const [dismissed, setDismissed] = useState(false);
   const [tooltipHidden, setTooltipHidden] = useState(true);
+  const { message, tooltipMessages } = props;
+
+  const toggleTooltip = () => setTooltipHidden(!tooltipHidden);
 
   return (
     <div className={`banner ${dismissed && 'dismissed'}`}>
-      <div
-        onMouseEnter={() => setTooltipHidden(false)}
-        onMouseLeave={() => setTooltipHidden(true)}
-      >
+      <div onMouseEnter={toggleTooltip} onMouseLeave={toggleTooltip}>
         <FontAwesomeIcon icon={faInfoCircle} />
         <div className={`tooltip ${tooltipHidden && 'hidden'}`}>
-          {props.tooltipMessages.map((message, index) => (
+          {tooltipMessages.map((message, index) => (
             <li key={index}>{message}</li>
           ))}
         </div>
       </div>
-      <div className="message">{props.message}</div>
+      <div className="message">{message}</div>
       <div className="close" onClick={() => setDismissed(true)}>
         ✕
       </div>

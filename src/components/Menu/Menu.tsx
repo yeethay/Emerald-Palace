@@ -53,9 +53,9 @@ const Menu = () => {
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
         </div>
         <div ref={sliderRef} className="slider">
-          {menu.categories.map((category: ICategory, index) => (
+          {menu.categories.map((category: ICategory) => (
             <div
-              key={index}
+              key={category.name[language]}
               className="category"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${category.image})`,
@@ -77,13 +77,15 @@ const Menu = () => {
         <h1>{activeCategory.name[language]}</h1>
         <table>
           <tbody>
-            {activeCategory.items.map((item: IItem, index) => (
-              <tr key={index}>
-                <td className="number">{item.number}</td>
-                <td className="name">{item.name[language]}</td>
-                <td className="price">{item.price}</td>
-              </tr>
-            ))}
+            {activeCategory.items.map(
+              ({ number, name, price }: IItem, index) => (
+                <tr key={index}>
+                  <td className="number">{number}</td>
+                  <td className="name">{name[language]}</td>
+                  <td className="price">{price}</td>
+                </tr>
+              )
+            )}
           </tbody>
         </table>
       </div>
