@@ -17,3 +17,12 @@
   right: 0;
   overflow-y: auto;
 }
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+:focus {
+  outline: none;
+}
