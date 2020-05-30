@@ -1,0 +1,22 @@
+.banner {
+  position: fixed;
+  margin: auto;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-color: #efefef;
+  z-index: 1;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .close {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.banner.dismissed {
+  display: none;
+}

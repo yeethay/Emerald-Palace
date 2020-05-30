@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import Banner from '../Banner/Banner';
 import menu from './takeout-menu.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -27,7 +28,9 @@ interface IItem {
 }
 
 const TakeoutMenu = () => {
-  const [activeCategory, setActiveCategory] = useState<ICategory>(menu[0]);
+  const [activeCategory, setActiveCategory] = useState<ICategory>(
+    menu.categories[0]
+  );
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const scroll = (amount: number) =>
@@ -38,12 +41,13 @@ const TakeoutMenu = () => {
 
   return (
     <div className="menu">
+      <Banner message={menu.delivery}></Banner>
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-300)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
         </div>
         <div ref={sliderRef} className="slider">
-          {menu.map((category: ICategory, index) => (
+          {menu.categories.map((category: ICategory, index) => (
             <div
               key={index}
               className="category"

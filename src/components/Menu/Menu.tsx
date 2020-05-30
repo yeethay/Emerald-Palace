@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import Banner from '../Banner/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faChevronLeft,
@@ -7,6 +8,10 @@ import {
 import menu from './menu.json';
 import './Menu.css';
 
+interface IMenu {
+  categories: ICategory[];
+  delivery: string;
+}
 interface ICategory {
   name: IMultiLanguageName;
   image: string;
@@ -33,7 +38,9 @@ enum Languages {
 
 const Menu = () => {
   const [language, setLanguage] = useState(Languages.ENGLISH);
-  const [activeCategory, setActiveCategory] = useState<ICategory>(menu[0]);
+  const [activeCategory, setActiveCategory] = useState<ICategory>(
+    menu.categories[0]
+  );
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const scroll = (amount: number) =>
@@ -44,12 +51,13 @@ const Menu = () => {
 
   return (
     <div className="menu">
+      <Banner message={menu.delivery} />
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-500)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
         </div>
         <div ref={sliderRef} className="slider">
-          {menu.map((category: ICategory, index) => (
+          {menu.categories.map((category: ICategory, index) => (
             <div
               key={index}
               className="category"
