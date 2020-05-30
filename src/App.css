@@ -10,7 +10,7 @@
 
 .main > *:not(.home) {
   position: absolute;
-  padding: 5% 30%;
+  padding: 5% 25%;
   top: 100px;
   bottom: 0;
   left: 0;
