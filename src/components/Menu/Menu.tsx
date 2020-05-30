@@ -9,12 +9,13 @@ import menu from './menu.json';
 import './Menu.css';
 
 interface ICategory {
-  name: IMultiLanguageName;
+  name: IMultiLanguageString;
   image: string;
   items: IItem[];
+  description?: IMultiLanguageString;
 }
 
-interface IMultiLanguageName {
+interface IMultiLanguageString {
   en: string;
   zh: string;
   vi: string;
@@ -22,7 +23,7 @@ interface IMultiLanguageName {
 
 interface IItem {
   number: string;
-  name: IMultiLanguageName;
+  name: IMultiLanguageString;
   price: string;
 }
 
@@ -75,6 +76,11 @@ const Menu = () => {
       </div>
       <div className="active-category">
         <h1>{activeCategory.name[language]}</h1>
+        {activeCategory.description && (
+          <div className="description">
+            {activeCategory.description[language]}
+          </div>
+        )}
         <table>
           <tbody>
             {activeCategory.items.map(
