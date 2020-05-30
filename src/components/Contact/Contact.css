@@ -1,11 +1,7 @@
 .contact {
   display: flex;
   flex-direction: column;
-  top: 20%;
-  height: 80%;
-  width: 60%;
   margin: auto;
-  position: relative;
   align-items: center;
   align-content: center;
 }
