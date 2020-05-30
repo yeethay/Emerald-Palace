@@ -41,7 +41,7 @@ const TakeoutMenu = () => {
 
   return (
     <div className="menu">
-      <Banner message={menu.delivery}></Banner>
+      <Banner message={menu.delivery} tooltipMessages={menu.discounts}></Banner>
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-300)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />

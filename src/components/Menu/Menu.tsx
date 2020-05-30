@@ -8,10 +8,6 @@ import {
 import menu from './menu.json';
 import './Menu.css';
 
-interface IMenu {
-  categories: ICategory[];
-  delivery: string;
-}
 interface ICategory {
   name: IMultiLanguageName;
   image: string;
@@ -51,7 +47,7 @@ const Menu = () => {
 
   return (
     <div className="menu">
-      <Banner message={menu.delivery} />
+      <Banner message={menu.delivery} tooltipMessages={menu.discounts} />
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-500)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />

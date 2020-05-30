@@ -1,5 +1,10 @@
 {
   "delivery": "Free Delivery with orders over $35.00 and within 3km radius",
+  "discounts": [
+    "10% off cash pick-up orders",
+    "5% off credit/debit card pick-up orders",
+    "Not valid on Dinner Special"
+  ],
   "categories": [
     {
       "name": "Appetizers",

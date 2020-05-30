@@ -1,5 +1,9 @@
 {
-  "delivery": "Free Delivery with orders over $50.00 and within 3km radius",
+  "delivery": "Free Delivery with orders over $50 and within 3km radius",
+  "discounts": [
+    "10% off cash pick-up orders over $50",
+    "5% off credit/debit card pick-up orders over $50"
+  ],
   "categories": [
     {
       "name": {

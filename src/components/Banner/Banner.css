@@ -12,11 +12,41 @@
   align-items: center;
 }
 
-.banner .close {
+.banner .close,
+.banner svg {
   cursor: pointer;
-  margin-left: 10px;
+}
+
+.banner .message {
+  margin: 0 10px;
 }
 
 .banner.dismissed {
+  display: none;
+}
+
+.banner .tooltip {
+  position: absolute;
+  transform: translateX(-50%) translateY(-150%);
+  background-color: #000;
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  list-style: none;
+}
+
+.banner .tooltip::after {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.banner .tooltip.hidden {
   display: none;
 }
