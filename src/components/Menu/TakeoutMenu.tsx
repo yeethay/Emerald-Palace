@@ -77,9 +77,9 @@ const TakeoutMenu = () => {
             )}
             {activeCategory.items.map((item: IItem, index) => (
               <tr key={index}>
-                {item.number && <td>{item.number}</td>}
-                <td>
-                  <div className="name-description">
+                {item.number && <td className="number">{item.number}</td>}
+                <td className="name">
+                  <div>
                     <div>{item.name}</div>
                     <div className="description">{item.description}</div>
                   </div>
@@ -87,7 +87,7 @@ const TakeoutMenu = () => {
                 {Array.isArray(item.price) ? (
                   item.price.map((p, index) => <td key={index}>{p}</td>)
                 ) : (
-                  <td>{item.price}</td>
+                  <td className="price">{item.price}</td>
                 )}
               </tr>
             ))}

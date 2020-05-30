@@ -5,6 +5,7 @@
 .menu table {
   width: 100%;
   min-width: 500px;
+  font-size: 1.2em;
 }
 
 .menu th {
@@ -22,10 +23,6 @@
 .menu tr:hover > :not(th) {
   color: #27864a;
   transition: 0.2s;
-}
-
-.menu td .name-description {
-  padding: 5px 0;
 }
 
 .menu td .description {
