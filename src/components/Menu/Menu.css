@@ -4,9 +4,8 @@
 
 .menu table {
   width: 100%;
-  min-width: 500px;
   font-size: 1.2em;
-  margin: 30px 0;
+  margin: 30px 0 0 0;
 }
 
 .menu h1 {
@@ -31,13 +30,12 @@
 }
 
 .menu .slider-container {
-  position: absolute;
   margin: auto;
   top: 5%;
   bottom: 76%;
   left: 0;
   right: 0;
-  padding: 1rem 25%;
+  height: 15vh;
   display: flex;
   flex-direction: row;
 }
@@ -54,10 +52,11 @@
 .menu .slider {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(15, minmax(200px, 1fr));
+  grid-template-columns: repeat(15, minmax(240px, 1fr));
   overflow: scroll;
   height: 100%;
   scrollbar-width: none;
+  font-size: 1.2em;
 }
 
 .menu .slider::-webkit-scrollbar {
@@ -71,20 +70,15 @@
   align-items: center;
   cursor: pointer;
   color: white;
-  font-weight: 900;
 }
 
 .menu .active-category {
-  position: absolute;
-  margin: auto 30%;
-  top: 25%;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  margin: auto 8%;
 }
 
 .menu tr td.number {
   width: 50px;
+  padding-top: 0;
 }
 
 .menu tr td.name {
@@ -93,4 +87,23 @@
 
 .menu tr td.price {
   text-align: right;
+}
+
+@media screen and (max-width: 800px) {
+  .menu table {
+    font-size: 0.8rem;
+  }
+  .menu .slider-container .left,
+  .menu .slider-container .right {
+    display: none;
+  }
+  .menu tr td.number {
+    width: 30px;
+  }
+  .menu .active-category {
+    margin: 0;
+  }
+  .menu .description {
+    font-size: 0.75em;
+  }
 }
