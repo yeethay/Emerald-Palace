@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Lato', 'Noto', sans-serif;
-  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
@@ -12,7 +12,7 @@ code {
 
 @font-face {
   font-family: 'Noto';
-  src: url(./assets/NotoSerifTC-Light.otf);
+  src: url(/fonts/NotoSerifTC-Light.otf);
   font-weight: 900;
   font-style: normal;
 }

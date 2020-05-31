@@ -2,5 +2,8 @@
   "name": "Emerald Palace",
   "name_zh": "翡翠軒",
   "address": "55 Castleridge Blvd NE, Calgary, AB T3J 3J8, Canada",
-  "phone": "+1 (403) 568-2832"
+  "phone": {
+    "display": "+1 (403) 568-2832",
+    "href": "+1-403-568-2832"
+  }
 }

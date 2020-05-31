@@ -1,2 +1,45 @@
 .contact {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+  align-content: center;
+}
+
+.contact .contact-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.contact h2 {
+  font-weight: 900;
+}
+
+.google-map {
+  width: 60%;
+  height: 100%;
+  margin: 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.contact ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+.times {
+  display: flex;
+}
+
+.days {
+  padding: 0;
+}
+
+.contact span,
+.contact a,
+.contact ul {
+  font-size: 16px;
+  font-weight: 600;
 }

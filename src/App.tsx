@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import About from './components/About/About';
 import Menu from './components/Menu/Menu';
+import TakeoutMenu from './components/Menu/TakeoutMenu';
 import Contact from './components/Contact/Contact';
 import './App.css';
 
@@ -12,20 +13,25 @@ function App() {
     <Router>
       <div className="app">
         <Navbar />
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/menu">
-            <Menu />
-          </Route>
-          <Route path="/contact">
-            <Contact />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
+        <div className="main">
+          <Switch>
+            <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/menu">
+              <Menu />
+            </Route>
+            <Route path="/takeout-menu">
+              <TakeoutMenu />
+            </Route>
+            <Route path="/contact">
+              <Contact />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
+        </div>
       </div>
     </Router>
   );

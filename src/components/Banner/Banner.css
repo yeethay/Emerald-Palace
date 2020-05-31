@@ -1,0 +1,52 @@
+.banner {
+  position: fixed;
+  margin: auto;
+  top: 100px;
+  left: 0;
+  right: 0;
+  background-color: #efefef;
+  z-index: 1;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .close,
+.banner svg {
+  cursor: pointer;
+}
+
+.banner .message {
+  margin: 0 10px;
+}
+
+.banner.dismissed {
+  display: none;
+}
+
+.banner .tooltip {
+  position: absolute;
+  transform: translateX(-50%) translateY(-150%);
+  background-color: #000;
+  color: #fff;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 5px;
+  padding: 5px;
+  list-style: none;
+}
+
+.banner .tooltip::after {
+  content: ' ';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+.banner .tooltip.hidden {
+  display: none;
+}

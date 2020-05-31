@@ -1,5 +1,5 @@
-.main {
-  background-image: url('../../assets/clem-onojeghuo-r8lDTtSWGUc-unsplash.jpg');
+.home {
+  background-image: url(/images/background.jpg);
   background-color: #a4cfb4;
   background-blend-mode: screen;
   background-position: center;
@@ -23,7 +23,6 @@
 .center .name {
   font-size: 76px;
   color: #000;
-  font-weight: 900;
   display: block;
 }
 
