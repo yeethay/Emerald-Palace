@@ -18,6 +18,12 @@
   overflow-y: auto;
 }
 
+@media screen and (max-width: 800px) {
+  .main > *:not(.home) {
+    padding: 5% 5vw;
+  }
+}
+
 a {
   text-decoration: none;
   color: #000;
