@@ -21,6 +21,12 @@
   margin: 0 10px;
 }
 
+@media screen and (max-width: 800px) {
+  .banner .message {
+    font-size: 0.8em;
+  }
+}
+
 .banner.dismissed {
   display: none;
 }
