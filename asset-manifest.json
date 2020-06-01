@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/emerald-palace/static/css/main.c10e873c.chunk.css",
+    "main.js": "/emerald-palace/static/js/main.6ff7706b.chunk.js",
+    "main.js.map": "/emerald-palace/static/js/main.6ff7706b.chunk.js.map",
+    "runtime-main.js": "/emerald-palace/static/js/runtime-main.b4613e28.js",
+    "runtime-main.js.map": "/emerald-palace/static/js/runtime-main.b4613e28.js.map",
+    "static/js/2.0d5f4d77.chunk.js": "/emerald-palace/static/js/2.0d5f4d77.chunk.js",
+    "static/js/2.0d5f4d77.chunk.js.map": "/emerald-palace/static/js/2.0d5f4d77.chunk.js.map",
+    "index.html": "/emerald-palace/index.html",
+    "precache-manifest.0f7388b6ff30196b7a88249bfec8e6ee.js": "/emerald-palace/precache-manifest.0f7388b6ff30196b7a88249bfec8e6ee.js",
+    "service-worker.js": "/emerald-palace/service-worker.js",
+    "static/css/main.c10e873c.chunk.css.map": "/emerald-palace/static/css/main.c10e873c.chunk.css.map",
+    "static/js/2.0d5f4d77.chunk.js.LICENSE.txt": "/emerald-palace/static/js/2.0d5f4d77.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b4613e28.js",
+    "static/js/2.0d5f4d77.chunk.js",
+    "static/css/main.c10e873c.chunk.css",
+    "static/js/main.6ff7706b.chunk.js"
+  ]
+}
