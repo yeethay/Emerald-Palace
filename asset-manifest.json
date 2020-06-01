@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Emerald-Palace/static/css/main.c10e873c.chunk.css",
-    "main.js": "/Emerald-Palace/static/js/main.7285bc81.chunk.js",
-    "main.js.map": "/Emerald-Palace/static/js/main.7285bc81.chunk.js.map",
+    "main.js": "/Emerald-Palace/static/js/main.28e48238.chunk.js",
+    "main.js.map": "/Emerald-Palace/static/js/main.28e48238.chunk.js.map",
     "runtime-main.js": "/Emerald-Palace/static/js/runtime-main.7cc3be6f.js",
     "runtime-main.js.map": "/Emerald-Palace/static/js/runtime-main.7cc3be6f.js.map",
     "static/js/2.0d5f4d77.chunk.js": "/Emerald-Palace/static/js/2.0d5f4d77.chunk.js",
     "static/js/2.0d5f4d77.chunk.js.map": "/Emerald-Palace/static/js/2.0d5f4d77.chunk.js.map",
     "index.html": "/Emerald-Palace/index.html",
-    "precache-manifest.de5d03ce81458f45c330f83a1422192e.js": "/Emerald-Palace/precache-manifest.de5d03ce81458f45c330f83a1422192e.js",
+    "precache-manifest.3b3c30ae390857d4634f802706068db2.js": "/Emerald-Palace/precache-manifest.3b3c30ae390857d4634f802706068db2.js",
     "service-worker.js": "/Emerald-Palace/service-worker.js",
     "static/css/main.c10e873c.chunk.css.map": "/Emerald-Palace/static/css/main.c10e873c.chunk.css.map",
     "static/js/2.0d5f4d77.chunk.js.LICENSE.txt": "/Emerald-Palace/static/js/2.0d5f4d77.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.7cc3be6f.js",
     "static/js/2.0d5f4d77.chunk.js",
     "static/css/main.c10e873c.chunk.css",
-    "static/js/main.7285bc81.chunk.js"
+    "static/js/main.28e48238.chunk.js"
   ]
 }
