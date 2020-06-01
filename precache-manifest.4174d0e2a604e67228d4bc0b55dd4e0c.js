@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ed7fe5d462bea091877c83f3f9bb3b05",
+    "revision": "c2e9897e6c71a7a7a0411f158328226a",
     "url": "/Emerald-Palace/index.html"
   },
   {
-    "revision": "10dfc23ebb1fda34f748",
+    "revision": "4abbfa48c5165562a32a",
     "url": "/Emerald-Palace/static/css/main.b752cdb3.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Emerald-Palace/static/js/2.0d5f4d77.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "10dfc23ebb1fda34f748",
-    "url": "/Emerald-Palace/static/js/main.28e48238.chunk.js"
+    "revision": "4abbfa48c5165562a32a",
+    "url": "/Emerald-Palace/static/js/main.c9bde230.chunk.js"
   },
   {
     "revision": "bf3bcd4d8e811edd34c3",
