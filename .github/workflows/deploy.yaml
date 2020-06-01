@@ -6,11 +6,20 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Set up Node
+        uses: actions/setup-node@v1
+
+      - name: Checkout
+        uses: actions/checkout@v2
         with:
           node-version: 12
-      - run: git config --global user.name "henrytran28"
-      - run: git config --global user.email "henrytrann28@gmail"
-      - run: yarn install
-      - run: yarn deploy
+
+      - name: Install
+        run: yarn install
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config user.name henry.tran
+          git config user.email henry.tran@users.noreply.github.com
+          git remote set-url origin https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/YYC-HALT/Emerald-Palace.git
+          yarn deploy
