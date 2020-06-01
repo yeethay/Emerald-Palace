@@ -18,22 +18,22 @@ const Contact = () => {
   let googleMapRef = useRef<HTMLDivElement>(null);
   let googleMap = useRef<google.maps.Map>();
   let marker = useRef<google.maps.Marker>();
-  let restaurantLocation: Location = { lat: 51.098501, lng: -113.962162 };
-
-  const createGoogleMap = () =>
-    new window.google.maps.Map(googleMapRef.current as Element, {
-      zoom: 16,
-      center: restaurantLocation,
-      disableDefaultUI: true,
-    });
-
-  const createMarker = () =>
-    new window.google.maps.Marker({
-      position: restaurantLocation,
-      map: googleMap.current,
-    });
 
   useEffect(() => {
+    const restaurantLocation: Location = { lat: 51.098501, lng: -113.962162 };
+    const createGoogleMap = () =>
+      new window.google.maps.Map(googleMapRef.current as Element, {
+        zoom: 16,
+        center: restaurantLocation,
+        disableDefaultUI: true,
+      });
+
+    const createMarker = () =>
+      new window.google.maps.Marker({
+        position: restaurantLocation,
+        map: googleMap.current,
+      });
+
     const googleMapScript = document.createElement('script');
 
     googleMapScript.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAP_API_KEY}`;
@@ -43,7 +43,7 @@ const Contact = () => {
       googleMap.current = createGoogleMap();
       marker.current = createMarker();
     });
-  }, [createGoogleMap, createMarker]);
+  }, []);
 
   return (
     <div className="contact">

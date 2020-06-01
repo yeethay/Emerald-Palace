@@ -34,7 +34,7 @@ enum Languages {
 }
 
 const Menu = () => {
-  const [language, setLanguage] = useState(Languages.ENGLISH);
+  const [language /*, setLanguage*/] = useState(Languages.ENGLISH);
   const [activeCategory, setActiveCategory] = useState<ICategory>(
     menu.categories[0]
   );
