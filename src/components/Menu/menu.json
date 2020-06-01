@@ -163,7 +163,7 @@
     },
     {
       "name": { "en": "Live Seafood", "zh": "生猛游水海鮮", "vi": "" },
-      "image": "/images/live-seafood.jpg",
+      "image": "images/live-seafood.jpg",
       "items": [
         {
           "number": "139",
@@ -196,7 +196,7 @@
     },
     {
       "name": { "en": "Seafood", "zh": "環球海鮮", "vi": "" },
-      "image": "/images/seafood.jpg",
+      "image": "images/seafood.jpg",
       "items": [
         {
           "number": "146",
@@ -265,7 +265,7 @@
     },
     {
       "name": { "en": "Chicken", "zh": "農場鮮雞", "vi": "" },
-      "image": "/images/chicken.jpg",
+      "image": "images/chicken.jpg",
       "items": [
         {
           "number": "153",
@@ -307,7 +307,7 @@
     },
     {
       "name": { "en": "Pork & Beef", "zh": "豬牛類", "vi": "" },
-      "image": "/images/pork-and-beef.jpg",
+      "image": "images/pork-and-beef.jpg",
       "items": [
         {
           "number": "157",
@@ -340,7 +340,7 @@
     },
     {
       "name": { "en": "Hot Pot", "zh": "煲仔天地", "vi": "" },
-      "image": "/images/hot-pot.jpg",
+      "image": "images/hot-pot.jpg",
       "items": [
         {
           "number": "162",
@@ -409,7 +409,7 @@
     },
     {
       "name": { "en": "Vegetables", "zh": "田園時菜", "vi": "" },
-      "image": "/images/vegetables.jpg",
+      "image": "images/vegetables.jpg",
       "items": [
         {
           "number": "169",
@@ -478,7 +478,7 @@
     },
     {
       "name": { "en": "Peking Duck", "zh": "京鴨", "vi": "" },
-      "image": "/images/peking-duck.jpg",
+      "image": "images/peking-duck.jpg",
       "description": {
         "en": "Crispy Skin with Crepes & Shredded Duck Meat Fried Noodles",
         "zh": "鵝絲粗炒或鵝絲羹或豆腐鵝骨湯",
@@ -516,7 +516,7 @@
     },
     {
       "name": { "en": "Noodle & Rice", "zh": "粉麵飯類", "vi": "" },
-      "image": "/images/noodle-and-rice.jpg",
+      "image": "images/noodle-and-rice.jpg",
       "items": [
         {
           "number": "177",
@@ -657,7 +657,7 @@
     },
     {
       "name": { "en": "Late Night Snack", "zh": "宵夜打冷", "vi": "" },
-      "image": "/images/late-night-snack.jpg",
+      "image": "images/late-night-snack.jpg",
       "items": [
         {
           "number": "361",
