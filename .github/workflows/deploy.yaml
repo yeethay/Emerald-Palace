@@ -10,5 +10,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: git config --global user.name "henrytran28"
+      - run: git config --global user.email "henrytrann28@gmail"
       - run: yarn install
       - run: yarn deploy
