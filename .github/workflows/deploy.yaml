@@ -1,0 +1,9 @@
+on:
+  push:
+    branches:
+      - github-deploy
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: yarn deploy
