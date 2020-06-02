@@ -1,0 +1,27 @@
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install
+        run: yarn install
+
+      - name: Deploy to GitHub Pages
+        run: |
+          git config user.name ${{secrets.USERNAME}}
+          git config user.email ${{secrets.EMAIL}}
+          git remote set-url origin https://x-access-token:${{secrets.GITHUB_TOKEN}}@github.com/YYC-HALT/Emerald-Palace.git
+          yarn deploy
+        env:
+          REACT_APP_GOOGLE_MAP_API_KEY: ${{secrets.MAP_API_KEY}}

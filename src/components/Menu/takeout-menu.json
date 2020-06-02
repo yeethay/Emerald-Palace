@@ -833,7 +833,7 @@
     },
     {
       "name": "Dinner Specials",
-      "image": "/images/dinner-specials.jpg",
+      "image": "images/dinner-specials.jpg",
       "items": [
         {
           "name": "Dinner for 1",
