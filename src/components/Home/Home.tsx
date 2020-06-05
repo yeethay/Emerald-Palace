@@ -1,13 +1,15 @@
 import React from 'react';
+import home from './home.json';
 import './Home.css';
 
 const Home = () => (
   <div className="home">
     <div className="center">
-      <span className="name">EMERALD PALACE</span>
+      <span className="name">{home.name.zh}</span>
+      <span className="name">{home.name.en.toUpperCase()}</span>
       <div className="contact-info">
-        <span>55 CASTLERIDGE BLVD NE, CALGARY, AB T3J 3J8</span>
-        <a href="tel:+1-403-568-2832">+1 (403) 568-2832</a>
+        <span>{home.address.toUpperCase()}</span>
+        <a href={`tel:${home.phone.href}`}>{home.phone.display}</a>
       </div>
     </div>
   </div>
