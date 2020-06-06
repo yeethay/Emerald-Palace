@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import contact from './contact.json';
 import './Contact.css';
 
 declare global {
@@ -47,39 +48,40 @@ const Contact = () => {
 
   return (
     <div className="contact">
-      <div className="contact-info">
-        <div>
-          <h2>Location</h2>
-          <span>
-            55 CASTLERIDGE BLVD NE
-            <br />
-            CALGARY, AB T3J 3J8
-          </span>
-          <h2>Contact</h2>
-          <a href="tel:+1-403-568-2832">+1 (403) 568-2832</a>
-          <h2>Hours</h2>
-          <div className="times">
-            <ul className="days">
-              <li>Mon</li>
-              <li>Tue</li>
-              <li>Wed</li>
-              <li>Thu</li>
-              <li>Fri</li>
-              <li>Sat</li>
-              <li>Sun</li>
-            </ul>
-            <ul className="hours">
-              <li>4PM - 1AM</li>
-              <li>Closed</li>
-              <li>4PM - 1AM</li>
-              <li>4PM - 1AM</li>
-              <li>4PM - 2AM</li>
-              <li>4PM - 2AM</li>
-              <li>4PM - 1AM</li>
-            </ul>
+      <h2>CONTACT US</h2>
+      <div className="desktop">
+        <div className="google-map" ref={googleMapRef} />
+        <div className="contact-info">
+          <div className="section">
+            <h3>LOCATION</h3>
+            <a href={contact.location.href}>
+              {contact.location.address.split(',').map((line, index) => (
+                <span key={index} className="address">
+                  {line}
+                </span>
+              ))}
+            </a>
+          </div>
+          <div className="section">
+            <h3>PHONE</h3>
+            <a href={contact.phone.href}>{contact.phone.label}</a>
+          </div>
+          <div className="section">
+            <h3>HOURS</h3>
+            <div className="times">
+              <ul className="days">
+                {contact.hours.map((item, index) => (
+                  <li key={index}>{item.day}</li>
+                ))}
+              </ul>
+              <ul className="hours">
+                {contact.hours.map((item, index) => (
+                  <li key={index}>{item.hours}</li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="google-map" ref={googleMapRef} />
       </div>
     </div>
   );
