@@ -34,12 +34,12 @@ span.address {
 @media (min-width: 800px) {
   .desktop {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .google-map {
-    width: 65%;
-    margin-right: 50px;
+    width: 70%;
     height: 44vh;
   }
 }
