@@ -1,45 +1,24 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import navbar from './navbar.json';
 import './Navbar.css';
 
 const Navbar = () => {
-  const location = useLocation();
-  const [transparent, setTransparent] = useState(true);
-  let wrapperRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   const path = location.pathname;
-  //   if (path === '/') setTransparent(true);
-  //   else setTransparent(false);
-  // }, [location]);
-
-  const handleClick = () => {
-    const wrapper = wrapperRef.current;
-    wrapper?.classList.toggle('is-nav-open');
-  };
+  const [open, setOpen] = useState(false);
+  const toggleOpen = () => setOpen(!open);
 
   return (
-    <div ref={wrapperRef} className="wrapper">
-      <div className="navbar">
-        <button className="hamburger" onClick={handleClick}>
-          <FontAwesomeIcon icon={faBars} size="2x" />
-        </button>
-        {navbar.map((item) => (
-          <Link to={item.route}>
-            <div className="nav-item">{item.name}</div>
-          </Link>
-        ))}
-      </div>
-      <div className="mobile-navbar">
-        {navbar.map((item) => (
-          <Link to={item.route}>
-            <div className="">{item.name}</div>
-          </Link>
-        ))}
-      </div>
+    <div className={`navbar ${open && 'open'}`}>
+      <button className="hamburger" onClick={toggleOpen}>
+        <FontAwesomeIcon icon={faBars} size="3x" />
+      </button>
+      {navbar.map((item, index) => (
+        <Link key={index} to={item.route}>
+          <div className={`nav-item ${open && 'open'}`}>{item.name}</div>
+        </Link>
+      ))}
     </div>
   );
 };

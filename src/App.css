@@ -8,10 +8,10 @@
   z-index: -2;
 }
 
-.main > *:not(.home) {
+.main > * {
   position: absolute;
   padding: 5% 25%;
-  top: 100px;
+  top: 10%;
   bottom: 0;
   left: 0;
   right: 0;
