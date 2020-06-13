@@ -1,0 +1,40 @@
+{
+  "location": {
+    "address": "55 Castleridge Blvd NE, Calgary AB T3J 3J8",
+    "href": "https://maps.google.com/?q=55 Castleridge Blvd NE, Calgary AB T3J 3J8"
+  },
+  "phone": {
+    "label": "+1 (403) 568-2832",
+    "href": "tel:1-403-568-2832"
+  },
+  "hours": [
+    {
+      "day": "Mon",
+      "hours": "4PM - 1AM"
+    },
+    {
+      "day": "Tue",
+      "hours": "Closed"
+    },
+    {
+      "day": "Wed",
+      "hours": "4PM - 1AM"
+    },
+    {
+      "day": "Thu",
+      "hours": "4PM - 1AM"
+    },
+    {
+      "day": "Fri",
+      "hours": "4PM - 2AM"
+    },
+    {
+      "day": "Sat",
+      "hours": "4PM - 2AM"
+    },
+    {
+      "day": "Sun",
+      "hours": "4PM - 1AM"
+    }
+  ]
+}
