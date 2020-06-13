@@ -1,0 +1,22 @@
+[
+  {
+    "name": "HOME",
+    "route": "/"
+  },
+  {
+    "name": "ABOUT",
+    "route": "/about"
+  },
+  {
+    "name": "MENU",
+    "route": "/menu"
+  },
+  {
+    "name": "T/O MENU",
+    "route": "/takeout-menu"
+  },
+  {
+    "name": "CONTACT",
+    "route": "/contact"
+  }
+]

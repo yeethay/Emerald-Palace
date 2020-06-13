@@ -1,32 +1,38 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useRef, useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import navbar from './navbar.json';
 import './Navbar.css';
 
 const Navbar = () => {
-  const location = useLocation();
-  const [transparent, setTransparent] = useState(true);
+  const [open, setOpen] = useState(false);
+  const toggleOpen = () => setOpen(!open);
+  const navbarRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    const path = location.pathname;
-    if (path === '/') setTransparent(true);
-    else setTransparent(false);
-  }, [location]);
+    const handleClick = (e: MouseEvent) => {
+      if (navbarRef.current && !navbarRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClick);
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+    };
+  }, []);
+
   return (
-    <div className={`navbar ${transparent ? 'transparent' : ''}`}>
-      <Link to="/">
-        <div className="nav-item">HOME</div>
-      </Link>
-      <Link to="about">
-        <div className="nav-item">ABOUT</div>
-      </Link>
-      <Link to="menu">
-        <div className="nav-item">MENU</div>
-      </Link>
-      <Link to="takeout-menu">
-        <div className="nav-item">T/O MENU</div>
-      </Link>
-      <Link to="contact">
-        <div className="nav-item">CONTACT</div>
-      </Link>
+    <div ref={navbarRef} className={`navbar ${open && 'open'}`}>
+      <button className="hamburger" onClick={toggleOpen}>
+        <FontAwesomeIcon icon={faBars} size="3x" />
+      </button>
+      {navbar.map((item, index) => (
+        <Link key={index} to={item.route}>
+          <div className={`nav-item ${open && 'open'}`}>{item.name}</div>
+        </Link>
+      ))}
     </div>
   );
 };
