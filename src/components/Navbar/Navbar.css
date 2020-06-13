@@ -42,15 +42,15 @@
   .navbar {
     display: flex;
     flex-direction: column;
-    /* height: fit-content; */
     margin: auto;
-    z-index: 2;
+    z-index: 1;
     -webkit-box-shadow: 5px 7px 50px -10px rgba(0, 0, 0, 0.1);
     box-shadow: 5px 7px 50px -10px rgba(0, 0, 0, 0.1);
   }
 
   .navbar.open {
     height: fit-content;
+    z-index: 2;
   }
 
   .nav-item {

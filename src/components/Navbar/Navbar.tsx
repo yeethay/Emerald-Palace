@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
@@ -8,9 +8,23 @@ import './Navbar.css';
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const toggleOpen = () => setOpen(!open);
+  const navbarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClick = (e: MouseEvent) => {
+      if (navbarRef.current && !navbarRef.current.contains(e.target as Node)) {
+        setOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClick);
+    return () => {
+      document.removeEventListener('mousedown', handleClick);
+    };
+  }, []);
 
   return (
-    <div className={`navbar ${open && 'open'}`}>
+    <div ref={navbarRef} className={`navbar ${open && 'open'}`}>
       <button className="hamburger" onClick={toggleOpen}>
         <FontAwesomeIcon icon={faBars} size="3x" />
       </button>
