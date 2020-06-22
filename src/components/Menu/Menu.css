@@ -91,7 +91,7 @@
 
 @media screen and (max-width: 800px) {
   .menu table {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   .menu .slider-container .left,
   .menu .slider-container .right {
@@ -104,6 +104,6 @@
     margin: 0;
   }
   .menu .description {
-    font-size: 0.75em;
+    font-size: 0.8em;
   }
 }
