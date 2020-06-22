@@ -4,15 +4,11 @@
     "route": "/"
   },
   {
-    "name": "ABOUT",
-    "route": "/about"
-  },
-  {
     "name": "MENU",
     "route": "/menu"
   },
   {
-    "name": "T/O MENU",
+    "name": "TAKEOUT MENU",
     "route": "/takeout-menu"
   },
   {
