@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
-import About from './components/About/About';
 import Menu from './components/Menu/Menu';
 import TakeoutMenu from './components/Menu/TakeoutMenu';
 import Contact from './components/Contact/Contact';
@@ -15,9 +14,6 @@ function App() {
         <Navbar />
         <div className="main">
           <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
             <Route path="/menu">
               <Menu />
             </Route>
