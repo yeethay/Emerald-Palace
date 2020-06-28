@@ -106,13 +106,24 @@
 }
 
 @media screen and (max-width: 800px) {
+  .menu h1 {
+    font-size: 1.5em;
+  }
+  .menu .slider-container {
+    margin-top: 40px;
+  }
+  .menu .slider-container .slider {
+    grid-template-columns: repeat(15, minmax(180px, 1fr));
+  }
+
   .menu table {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .menu .slider-container .left,
   .menu .slider-container .right {
     display: none;
   }
+
   .menu tr td.number {
     width: 30px;
   }
