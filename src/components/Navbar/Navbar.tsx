@@ -11,15 +11,17 @@ const Navbar = () => {
   const navbarRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const handleClick = (e: MouseEvent) => {
+    const handleClick = (e: UIEvent) => {
       if (navbarRef.current && !navbarRef.current.contains(e.target as Node)) {
         setOpen(false);
       }
     };
 
     document.addEventListener('mousedown', handleClick);
+    document.addEventListener('touchstart', handleClick);
     return () => {
       document.removeEventListener('mousedown', handleClick);
+      document.removeEventListener('touchstart', handleClick);
     };
   }, []);
 
