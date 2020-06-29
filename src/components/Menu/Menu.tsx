@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -44,6 +44,10 @@ const Menu = () => {
       left: sliderRef.current.scrollLeft + amount,
       behavior: 'smooth',
     });
+
+  useEffect(() => {
+    document.title = 'Menu | Emerald Palace';
+  }, []);
 
   return (
     <div className="menu">

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import menu from './takeout-menu.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -38,6 +38,10 @@ const TakeoutMenu = () => {
       left: sliderRef.current.scrollLeft + amount,
       behavior: 'smooth',
     });
+
+  useEffect(() => {
+    document.title = 'Takeout Menu | Emerald Palace';
+  }, []);
 
   return (
     <div className="menu">
