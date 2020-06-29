@@ -8,7 +8,9 @@ const Home = () => (
       <span className="name">{home.name.zh}</span>
       <span className="name">{home.name.en.toUpperCase()}</span>
       <div className="contact-info">
-        <span>{home.address.toUpperCase()}</span>
+        <a href={`https://maps.google.com/?q=${home.address}`}>
+          {home.address.toUpperCase()}
+        </a>
         <a href={`tel:${home.phone.href}`}>{home.phone.display}</a>
       </div>
     </div>
