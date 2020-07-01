@@ -46,6 +46,10 @@ const Contact = () => {
     });
   }, []);
 
+  useEffect(() => {
+    document.title = 'Contact | Emerald Palace';
+  }, []);
+
   return (
     <div className="contact">
       <h2>CONTACT US</h2>

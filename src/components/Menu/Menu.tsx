@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -34,7 +34,6 @@ enum Languages {
 }
 
 const Menu = () => {
-  const [language /*, setLanguage*/] = useState(Languages.ENGLISH);
   const [activeCategory, setActiveCategory] = useState<ICategory>(
     menu.categories[0]
   );
@@ -46,6 +45,10 @@ const Menu = () => {
       behavior: 'smooth',
     });
 
+  useEffect(() => {
+    document.title = 'Menu | Emerald Palace';
+  }, []);
+
   return (
     <div className="menu">
       <Banner message={menu.delivery} tooltipMessages={menu.discounts} />
@@ -54,9 +57,9 @@ const Menu = () => {
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
         </div>
         <div ref={sliderRef} className="slider">
-          {menu.categories.map((category: ICategory) => (
+          {menu.categories.map((category: ICategory, index) => (
             <div
-              key={category.name[language]}
+              key={index}
               className="category"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${category.image})`,
@@ -66,7 +69,8 @@ const Menu = () => {
               }}
               onClick={() => setActiveCategory(category)}
             >
-              {category.name[language]}
+              <span>{category.name[Languages.CHINESE]}</span>
+              <span>{category.name[Languages.ENGLISH]}</span>
             </div>
           ))}
         </div>
@@ -75,10 +79,14 @@ const Menu = () => {
         </div>
       </div>
       <div className="active-category">
-        <h1>{activeCategory.name[language]}</h1>
+        <div className="flex row">
+          <h1>{activeCategory.name[Languages.CHINESE]}</h1>
+          <h1>{activeCategory.name[Languages.ENGLISH]}</h1>
+        </div>
         {activeCategory.description && (
           <div className="description">
-            {activeCategory.description[language]}
+            <span>{activeCategory.description[Languages.CHINESE]}</span>
+            <span>{activeCategory.description[Languages.ENGLISH]}</span>
           </div>
         )}
         <table>
@@ -87,7 +95,10 @@ const Menu = () => {
               ({ number, name, price }: IItem, index) => (
                 <tr key={index}>
                   <td className="number">{number}</td>
-                  <td className="name">{name[language]}</td>
+                  <td className="name">
+                    <span>{name[Languages.CHINESE]}</span>
+                    <span>{name[Languages.ENGLISH]}</span>
+                  </td>
                   <td className="price">{price}</td>
                 </tr>
               )

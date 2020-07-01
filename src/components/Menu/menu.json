@@ -355,7 +355,7 @@
           "number": "163",
           "name": {
             "en": "Sliced Beef with Ginger & Green Onion Hot Pot",
-            "zh": "恙沖牛肉煲",
+            "zh": "洋蔥牛肉煲",
             "vi": ""
           },
           "price": "15.95"
@@ -481,7 +481,7 @@
       "image": "images/peking-duck.jpg",
       "description": {
         "en": "Crispy Skin with Crepes & Shredded Duck Meat Fried Noodles",
-        "zh": "鵝絲粗炒或鵝絲羹或豆腐鵝骨湯",
+        "zh": "鴨絲粗炒或鴨絲羹或豆腐鴨骨湯",
         "vi": ""
       },
       "items": [
@@ -531,7 +531,7 @@
           "number": "178",
           "name": {
             "en": "Stir Fried Beef with Flat Rice Noodle",
-            "zh": "干炒牛河",
+            "zh": "乾炒牛河",
             "vi": ""
           },
           "price": "12.95"
@@ -603,7 +603,7 @@
           "number": "186",
           "name": {
             "en": "Stir Fried Yee Mein",
-            "zh": "干燒伊麵",
+            "zh": "乾燒伊麵",
             "vi": ""
           },
           "price": "13.95"
@@ -612,7 +612,7 @@
           "number": "187",
           "name": {
             "en": "Salty Fish & Chicken Fried Rice",
-            "zh": "咸魚雞粒炒",
+            "zh": "咸魚雞粒炒飯",
             "vi": ""
           },
           "price": "13.95"

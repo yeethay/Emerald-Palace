@@ -5,7 +5,7 @@
 .menu table {
   width: 100%;
   font-size: 1.2em;
-  margin: 30px 0 0 0;
+  margin: 10px 0;
 }
 
 .menu h1 {
@@ -29,8 +29,22 @@
   font-size: 0.8em;
 }
 
+.menu .active-category .description {
+  display: flex;
+  flex-direction: column;
+}
+
+.active-category h1 {
+  line-height: 30px;
+  margin: 20px 0;
+}
+
+.active-category .flex.row > *:not(:last-child):after {
+  content: '\00a0•\00a0';
+}
+
 .menu .slider-container {
-  margin: auto;
+  margin: 10px 0;
   top: 5%;
   bottom: 76%;
   left: 0;
@@ -83,6 +97,8 @@
 
 .menu tr td.name {
   padding: 5px 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .menu tr td.price {
@@ -90,13 +106,25 @@
 }
 
 @media screen and (max-width: 800px) {
+  .menu h1 {
+    font-size: 1.5em;
+  }
+  .menu .slider-container {
+    margin-top: 40px;
+  }
+  .menu .slider-container .slider {
+    grid-template-columns: repeat(15, minmax(200px, 1fr));
+    font-size: 1em;
+  }
+
   .menu table {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   .menu .slider-container .left,
   .menu .slider-container .right {
     display: none;
   }
+
   .menu tr td.number {
     width: 30px;
   }
@@ -106,4 +134,18 @@
   .menu .description {
     font-size: 0.8em;
   }
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+}
+
+.category > * {
+  text-align: center;
+}
+
+.flex.row {
+  display: flex;
+  flex-direction: row;
 }
