@@ -9,7 +9,7 @@
       "name": {
         "en": "Appetizers",
         "zh": "餐前美食",
-        "vi": ""
+        "vi": "Món Ăn Khai Vi"
       },
       "image": "images/appetizers.jpg",
       "items": [
@@ -18,7 +18,7 @@
           "name": {
             "en": "Jelly Fish with Sesame Oil & Hot Sauce",
             "zh": "麻辣海蜇",
-            "vi": ""
+            "vi": "Hải Sứa Trộn Dầu Mè và Tương Ớt"
           },
           "price": "18.95"
         },
@@ -27,7 +27,7 @@
           "name": {
             "en": "Vietnamese Style Pork Feet & Jelly Fish",
             "zh": "越式燻蹄，海蜇",
-            "vi": ""
+            "vi": "Giò Thủ và Hải Sửa"
           },
           "price": "16.95"
         },
@@ -36,7 +36,7 @@
           "name": {
             "en": "Shredded Duck with Jelly Fish",
             "zh": "涼拌，鴨絲",
-            "vi": ""
+            "vi": "Hải Sứa Trộn Dầu Mè & Thịt Vịt Xè Nhuyễn"
           },
           "price": "16.95"
         },
@@ -45,7 +45,7 @@
           "name": {
             "en": "Japanese Style Salad Jelly Fish & Octopus",
             "zh": "海蜇，八爪魚仔（日式）",
-            "vi": ""
+            "vi": "Hải Sứa và Mực Con Xà Lách Kiểu Nhật"
           },
           "price": "18.95"
         },
@@ -54,7 +54,7 @@
           "name": {
             "en": "Mixed Meat Plate",
             "zh": "翡翠軒拼盤",
-            "vi": ""
+            "vi": "Món Khai Vị Đồ Nguội (Giò Thủ, Hải Sứa, Mực Ống)"
           },
           "price": "30.95"
         },
@@ -63,14 +63,14 @@
           "name": {
             "en": "Japanese Style Seafood Plate",
             "zh": "日式沙律拼盤",
-            "vi": ""
+            "vi": "Món Khai Vị Đồ Nguội (Mực Ống, Ốc, Vi Cá, Chân Vịt)"
           },
           "price": "36.95"
         }
       ]
     },
     {
-      "name": { "en": "Soup", "zh": "滋補湯羹", "vi": "" },
+      "name": { "en": "Soup", "zh": "滋補湯羹", "vi": "Súp Canh" },
       "image": "images/soup.jpg",
       "items": [
         {
@@ -78,7 +78,7 @@
           "name": {
             "en": "Salty Egg, Mustard Vegetable & Sliced Meat Soup",
             "zh": "咸蛋芥菜肉片湯",
-            "vi": ""
+            "vi": "Súp Cải Xanh, Hột Vịt Muối và Thịt Heo Miếng"
           },
           "price": "13.95"
         },
@@ -87,7 +87,7 @@
           "name": {
             "en": "White Pepper, Preserved Vegetable & Pork Belly Soup",
             "zh": "胡椒味菜豬肚湯",
-            "vi": ""
+            "vi": "Súp Bao Tử Heo Hầm Cải Mặn và Tiêu Trắng"
           },
           "price": "12.95"
         },
@@ -96,7 +96,7 @@
           "name": {
             "en": "Enoki, Peas Leave & Minced Beef Soup",
             "zh": "金菇豆苗牛羹",
-            "vi": ""
+            "vi": "Súp Bò Enoki (Nấm Nhật) và Cải Đọt Đậu Hoà Lan"
           },
           "price": "12.95"
         },
@@ -105,13 +105,17 @@
           "name": {
             "en": "Crab Meat Fish Maw Soup",
             "zh": "蟹肉魚肚羹",
-            "vi": ""
+            "vi": "Súp Cua & Bong Bóng Cá"
           },
           "price": "12.95"
         },
         {
           "number": "132",
-          "name": { "en": "Sea Food Soup", "zh": "竹笙海皇羹", "vi": "" },
+          "name": {
+            "en": "Sea Food Soup",
+            "zh": "竹笙海皇羹",
+            "vi": "Súp Trúc Sinh & Bong Bóng Cá"
+          },
           "price": "12.95"
         },
         {
@@ -119,7 +123,7 @@
           "name": {
             "en": "Enoki, Dry Scallop Soup",
             "zh": "金菇瑤柱羹",
-            "vi": ""
+            "vi": "Súp Nấm (Enoki Nhật) Điệp Khô"
           },
           "price": "12.95"
         },
@@ -128,7 +132,7 @@
           "name": {
             "en": "Crab Meat, Shark's Fin & Seafood Soup (for One)",
             "zh": "海皇蟹肉盅仔翅",
-            "vi": ""
+            "vi": "Súp Vi Cá, Sò Điệp, Cua, Mực,...(Chậu Chưng Nhỏ, 1 Người)"
           },
           "price": "20.95"
         },
@@ -137,7 +141,7 @@
           "name": {
             "en": "Shark's Fin Soup with Fresh Crab Meat",
             "zh": "生拆生蟹肉煲仔翅",
-            "vi": ""
+            "vi": "Súp Vi Cá & Thịt Cua Tươi Trong Tộ Nhỏ (1 Người)"
           },
           "price": "30.95"
         },
@@ -146,7 +150,7 @@
           "name": {
             "en": "Crab Meat & Shark's Fin Soup",
             "zh": "蟹肉紅燒翅",
-            "vi": ""
+            "vi": "Súp Vi Cá, Thịt Cua Xé Nhuyễn (3-5 Người)"
           },
           "price": "68.00"
         },
@@ -155,14 +159,18 @@
           "name": {
             "en": "Crab Meat, Shark's Fin & Seafood Soup",
             "zh": "海皇蟹肉翅",
-            "vi": ""
+            "vi": "Súp Vi Cá, Dò Diệp, Cua, Mực (3-5 Người)"
           },
           "price": "68.00"
         }
       ]
     },
     {
-      "name": { "en": "Live Seafood", "zh": "生猛游水海鮮", "vi": "" },
+      "name": {
+        "en": "Live Seafood",
+        "zh": "生猛游水海鮮",
+        "vi": "Đồ Biển Sống"
+      },
       "image": "images/live-seafood.jpg",
       "items": [
         {
@@ -170,7 +178,7 @@
           "name": {
             "en": "Lobster (Steamed, Creamy Sauce, Garlic Sauce, ...)",
             "zh": "龍蝦（上湯，奶油，蒜茸蒸，蒜召蒸）",
-            "vi": ""
+            "vi": "Tôm Hùm (Hấp Hành Tỏi, Hầm ơ Sữa, Xào Tỏi Ớt HK, Xào Hành Gừng, ...)"
           },
           "price": "Current Price"
         },
@@ -179,7 +187,7 @@
           "name": {
             "en": "Crab (Ginger & Onion, Steamed, Hong Kong Style)",
             "zh": "肉蟹（薑蔥，蒜召蒸，避風塘，清蒸）",
-            "vi": ""
+            "vi": "Cua (Xào Gừng Hành, Hấp Tươi, Rang Tỏi Ớt Kiểu HK)"
           },
           "price": "Current Price"
         },
@@ -188,14 +196,14 @@
           "name": {
             "en": "Pickerel or Tilapia Fish (Steamed, Deep Fried)",
             "zh": "碧古，立魚（清蒸，紅燒，古法蒸）",
-            "vi": ""
+            "vi": "Cá Pickerel, Rô Phi (Hấp, Chiên Dòn với Sốt Chua Ngọt)"
           },
           "price": "Current Price"
         }
       ]
     },
     {
-      "name": { "en": "Seafood", "zh": "環球海鮮", "vi": "" },
+      "name": { "en": "Seafood", "zh": "環球海鮮", "vi": "Đồ Biển Tươi" },
       "image": "images/seafood.jpg",
       "items": [
         {
@@ -203,7 +211,7 @@
           "name": {
             "en": "Fried Fish Fillet in Sweet & Salad Sauce",
             "zh": "京都沙拉青衣球",
-            "vi": ""
+            "vi": "Cá Phi-Lê Chiên Dòn với Kem Sữa Chảy mặt"
           },
           "price": "15.95"
         },
@@ -212,7 +220,7 @@
           "name": {
             "en": "Salt & Pepper Squid",
             "zh": "椒鹽鮮魷",
-            "vi": ""
+            "vi": "Mực Tươi Chiên Dòn Rang Muối Tiêu"
           },
           "price": "15.95"
         },
@@ -221,7 +229,7 @@
           "name": {
             "en": "Quick Fried Fish Fillet & Sugar Pea",
             "zh": "油泡青衣球",
-            "vi": ""
+            "vi": "Cá Phi Lê Xào Với Đậu Ngọt"
           },
           "price": "15.95"
         },
@@ -230,7 +238,7 @@
           "name": {
             "en": "Sesame Style Prawns",
             "zh": "香脆芝麻蝦",
-            "vi": ""
+            "vi": "Tôm Chiên Dòn với Sốt Kem và Mè Chảy Mặt"
           },
           "price": "16.95"
         },
@@ -239,7 +247,7 @@
           "name": {
             "en": "Pan Fried 3 Kinds of Seafood & in XO Sauce",
             "zh": "XO三鮮",
-            "vi": ""
+            "vi": "3 Thứ Đồ Biển Tươi Xào Rau Tiến Vua với Tương XO"
           },
           "price": "17.95"
         },
@@ -248,7 +256,7 @@
           "name": {
             "en": "Deep Fried Prawn with Walnut in Salad Sauce",
             "zh": "合桃沙拉炸蝦球",
-            "vi": ""
+            "vi": "Tôm Chiên, Sốt Xà lách & Walnut"
           },
           "price": "18.95"
         },
@@ -257,14 +265,14 @@
           "name": {
             "en": "Salt & Pepper 3 Kinds of Seafood (Sh, Sq & Scallop)",
             "zh": "椒鹽三鮮",
-            "vi": ""
+            "vi": "Mực Tươi, Sò Điệp & Tôm Chiên Dòn Rang Muối Tiêu"
           },
           "price": "17.95"
         }
       ]
     },
     {
-      "name": { "en": "Chicken", "zh": "農場鮮雞", "vi": "" },
+      "name": { "en": "Chicken", "zh": "農場鮮雞", "vi": "Gà Quý-Phi" },
       "image": "images/chicken.jpg",
       "items": [
         {
@@ -272,7 +280,7 @@
           "name": {
             "en": "Crispy Fried Chicken",
             "zh": "當紅脆皮炸雞",
-            "vi": ""
+            "vi": "Gà Chiên Dòn"
           },
           "price": "13.95"
         },
@@ -281,7 +289,7 @@
           "name": {
             "en": "Crispy Fried Chicken with Garlic",
             "zh": "脆皮蒜香雞",
-            "vi": ""
+            "vi": "Gà Chiên Dòn Sốt Tương với Chiên Chảy Mặt"
           },
           "price": "13.95"
         },
@@ -290,7 +298,7 @@
           "name": {
             "en": "House Special Chicken (Cold)",
             "zh": "瑤柱貴妃龍崗雞",
-            "vi": ""
+            "vi": "Gà Hấp Quý-Phi (Thả Rong Lạnh)"
           },
           "price": "14.95"
         },
@@ -299,14 +307,14 @@
           "name": {
             "en": "House Special Chicken with Ginger, Onion & Pepper (Cold)",
             "zh": "蔥花霸王龍崗雞",
-            "vi": ""
+            "vi": "Gà hấp Quý-Phi với hành, Gừng & Ớt (Thả Rong Lạnh)"
           },
           "price": "14.95"
         }
       ]
     },
     {
-      "name": { "en": "Pork & Beef", "zh": "豬牛類", "vi": "" },
+      "name": { "en": "Pork & Beef", "zh": "豬牛類", "vi": "Thịt Bò & Heo" },
       "image": "images/pork-and-beef.jpg",
       "items": [
         {
@@ -314,7 +322,7 @@
           "name": {
             "en": "Pineapple Sweet and Sour Pork",
             "zh": "菠蘿咕嚕肉",
-            "vi": ""
+            "vi": "Thịt Heo Cục Chiên Dòn với Khóm & Sốt Chua Ngọt"
           },
           "price": "12.95"
         },
@@ -323,7 +331,7 @@
           "name": {
             "en": "Peking Style Pork Chop with Salad Dressing",
             "zh": "京都沙拉骨",
-            "vi": ""
+            "vi": "Sườn Chiên Miếng Sa-La (Xốp Dòn & Kem Sữa Chảy Mặt)"
           },
           "price": "13.95"
         },
@@ -332,7 +340,7 @@
           "name": {
             "en": "Stir Fried Beef with Two Kinds of Mushrooms",
             "zh": "雙菇焗牛肉",
-            "vi": ""
+            "vi": "Bò Xào Cùng 2 Loại nâm Đông Cô"
           },
           "price": "13.95"
         }

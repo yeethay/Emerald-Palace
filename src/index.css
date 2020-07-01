@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Lato', 'Noto', sans-serif;
+  font-family: 'OpenSans', 'Lato', 'Noto', sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,6 +13,13 @@ code {
 @font-face {
   font-family: 'Noto';
   src: url(/Emerald-Palace/fonts/NotoSerifTC-Light.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url(/Emerald-Palace/fonts/OpenSans-Light.ttf);
   font-weight: 900;
   font-style: normal;
 }

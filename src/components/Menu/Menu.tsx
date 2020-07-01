@@ -71,6 +71,7 @@ const Menu = () => {
             >
               <span>{category.name[Languages.CHINESE]}</span>
               <span>{category.name[Languages.ENGLISH]}</span>
+              <span>{category.name[Languages.VIETNAMESE]}</span>
             </div>
           ))}
         </div>
@@ -82,11 +83,13 @@ const Menu = () => {
         <div className="flex row">
           <h1>{activeCategory.name[Languages.CHINESE]}</h1>
           <h1>{activeCategory.name[Languages.ENGLISH]}</h1>
+          <h1>{activeCategory.name[Languages.VIETNAMESE]}</h1>
         </div>
         {activeCategory.description && (
           <div className="description">
             <span>{activeCategory.description[Languages.CHINESE]}</span>
             <span>{activeCategory.description[Languages.ENGLISH]}</span>
+            <span>{activeCategory.description[Languages.VIETNAMESE]}</span>
           </div>
         )}
         <table>
@@ -98,6 +101,7 @@ const Menu = () => {
                   <td className="name">
                     <span>{name[Languages.CHINESE]}</span>
                     <span>{name[Languages.ENGLISH]}</span>
+                    <span>{name[Languages.VIETNAMESE]}</span>
                   </td>
                   <td className="price">{price}</td>
                 </tr>
