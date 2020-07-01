@@ -347,7 +347,7 @@
       ]
     },
     {
-      "name": { "en": "Hot Pot", "zh": "煲仔天地", "vi": "" },
+      "name": { "en": "Hot Pot", "zh": "煲仔天地", "vi": "Lò Đất/Kho Tộ" },
       "image": "images/hot-pot.jpg",
       "items": [
         {
@@ -416,7 +416,7 @@
       ]
     },
     {
-      "name": { "en": "Vegetables", "zh": "田園時菜", "vi": "" },
+      "name": { "en": "Vegetables", "zh": "田園時菜", "vi": "Rau Cải Tươi" },
       "image": "images/vegetables.jpg",
       "items": [
         {
@@ -485,7 +485,7 @@
       ]
     },
     {
-      "name": { "en": "Peking Duck", "zh": "京鴨", "vi": "" },
+      "name": { "en": "Peking Duck", "zh": "京鴨", "vi": "Vịt Băc Kinh" },
       "image": "images/peking-duck.jpg",
       "description": {
         "en": "Crispy Skin with Crepes & Shredded Duck Meat Fried Noodles",
@@ -523,7 +523,11 @@
       ]
     },
     {
-      "name": { "en": "Noodle & Rice", "zh": "粉麵飯類", "vi": "" },
+      "name": {
+        "en": "Noodle & Rice",
+        "zh": "粉麵飯類",
+        "vi": "Cơm/Hủ Tiế/Mì Xào"
+      },
       "image": "images/noodle-and-rice.jpg",
       "items": [
         {
