@@ -347,7 +347,7 @@
       ]
     },
     {
-      "name": { "en": "Hot Pot", "zh": "煲仔天地", "vi": "" },
+      "name": { "en": "Hot Pot", "zh": "煲仔天地", "vi": "Lò Đất/Kho Tộ" },
       "image": "images/hot-pot.jpg",
       "items": [
         {
@@ -355,7 +355,7 @@
           "name": {
             "en": "Egg Plant & Salty Fish Hot Pot",
             "zh": "魚香茄子煲",
-            "vi": ""
+            "vi": "Cà Tím & Cá mận Kho Tộ"
           },
           "price": "15.95"
         },
@@ -364,7 +364,7 @@
           "name": {
             "en": "Sliced Beef with Ginger & Green Onion Hot Pot",
             "zh": "洋蔥牛肉煲",
-            "vi": ""
+            "vi": "Thịt Bò Hành Gừng Kho Tộ"
           },
           "price": "15.95"
         },
@@ -373,7 +373,7 @@
           "name": {
             "en": "House Special Hot Pot",
             "zh": "翡翠八珍煲",
-            "vi": ""
+            "vi": "Thập Cẩm Kho Tộ (Tàu Hủ, Xá Xíu, Đồ Biển, Biển, Rau Cải,...)"
           },
           "price": "16.95"
         },
@@ -382,7 +382,7 @@
           "name": {
             "en": "House Special Fish Hot Pot",
             "zh": "柱候青衣豆腐煲",
-            "vi": ""
+            "vi": "Cá Fillet & Tàu Hủ Kho Tộ"
           },
           "price": "15.95"
         },
@@ -391,7 +391,7 @@
           "name": {
             "en": "Egg Plant, Salty Fish & Taiwan Egg Bean Curd Hot Pot",
             "zh": "魚香茄子玉子豆腐煲",
-            "vi": ""
+            "vi": "Cà tím, Cá mận và Tàu Hủ Hủ Đài-Loan Kho Tộ"
           },
           "price": "16.95"
         },
@@ -400,7 +400,7 @@
           "name": {
             "en": "Black Pepper Beef Hot Plate",
             "zh": "鐵板黑椒牛",
-            "vi": ""
+            "vi": "Thịt Bò, Nẩm Tươi Ram Tiêu Đen Trên Vĩ Sắi"
           },
           "price": "16.95"
         },
@@ -409,14 +409,14 @@
           "name": {
             "en": "Preserved Meat, Fish Tendon with Mushroom Hot Pot",
             "zh": "翅唇海味鍋",
-            "vi": ""
+            "vi": "Tay Cầm Hải Sản Môi Cá "
           },
           "price": "22.95"
         }
       ]
     },
     {
-      "name": { "en": "Vegetables", "zh": "田園時菜", "vi": "" },
+      "name": { "en": "Vegetables", "zh": "田園時菜", "vi": "Rau Cải Tươi" },
       "image": "images/vegetables.jpg",
       "items": [
         {
@@ -424,7 +424,7 @@
           "name": {
             "en": "Egg Bean Curd in Taiwanese Style",
             "zh": "台式玉子豆腐",
-            "vi": ""
+            "vi": "Tàu Hủ Đai-Loan chiên Dón"
           },
           "price": "14.95"
         },
@@ -433,7 +433,7 @@
           "name": {
             "en": "Stir Fried Water Lily with Preserved Beancurd",
             "zh": "椒絲腐乳通菜",
-            "vi": ""
+            "vi": "Rau Muống Xào Chao"
           },
           "price": "14.95"
         },
@@ -442,7 +442,7 @@
           "name": {
             "en": "Mushroom, Bean Curd with Baby Pok Choy",
             "zh": "上素金菇腐皮浸菜苗",
-            "vi": ""
+            "vi": "Món Chay: Kim Cô & Da Tàu Hủ Hầm Cải Trắng (Có Số)"
           },
           "price": "13.95"
         },
@@ -451,7 +451,7 @@
           "name": {
             "en": "Vegetarian Delight",
             "zh": "上素竹笙羅漢齋",
-            "vi": ""
+            "vi": "Món Chay: La-Hán (Trúc Sinh, Chả Bột, Đông Cô..)"
           },
           "price": "13.95"
         },
@@ -460,7 +460,7 @@
           "name": {
             "en": "Beef with Chinese Broccoli in XO Sauce",
             "zh": "XO牛肉芥蘭",
-            "vi": ""
+            "vi": "Thịt Bò Xào Cải Lạng với Tương XO"
           },
           "price": "16.95"
         },
@@ -469,7 +469,7 @@
           "name": {
             "en": "Pan Fried Bailing Mushroom on Snow Peas Leaf",
             "zh": "靈芝菇扒豆苗",
-            "vi": ""
+            "vi": "Món Chay: Nấm Bào Ngư Hầm Đọt Đậu & Tàu Miều"
           },
           "price": "19.95"
         },
@@ -478,19 +478,19 @@
           "name": {
             "en": "Pan Fried Crab Meat on Snow Peas Leaf",
             "zh": "蟹肉扒豆苗",
-            "vi": ""
+            "vi": "Thịt Cua Hầm Đọt Đậu & Tàu Miều"
           },
           "price": "19.95"
         }
       ]
     },
     {
-      "name": { "en": "Peking Duck", "zh": "京鴨", "vi": "" },
+      "name": { "en": "Peking Duck", "zh": "京鴨", "vi": "Vịt Băc Kinh" },
       "image": "images/peking-duck.jpg",
       "description": {
         "en": "Crispy Skin with Crepes & Shredded Duck Meat Fried Noodles",
         "zh": "鴨絲粗炒或鴨絲羹或豆腐鴨骨湯",
-        "vi": ""
+        "vi": "Vịt Bắc Kinh: Vịt Gói Bậc Kinh và Thịt Vịt Xé Nhuyễn Xào Mì Cọng Bự hoặc Súp Thịt Vịt Xé Nhuyễn hoặc Súp xương Vịt nấu Tàu Hủ Ky"
       },
       "items": [
         {
@@ -523,7 +523,11 @@
       ]
     },
     {
-      "name": { "en": "Noodle & Rice", "zh": "粉麵飯類", "vi": "" },
+      "name": {
+        "en": "Noodle & Rice",
+        "zh": "粉麵飯類",
+        "vi": "Cơm/Hủ Tiế/Mì Xào"
+      },
       "image": "images/noodle-and-rice.jpg",
       "items": [
         {
@@ -531,7 +535,7 @@
           "name": {
             "en": "Shanghai Fried Noodle",
             "zh": "上海粗炒",
-            "vi": ""
+            "vi": "Mì Xào Khô Cọng Bư Thương Hải"
           },
           "price": "12.95"
         },
@@ -540,7 +544,7 @@
           "name": {
             "en": "Stir Fried Beef with Flat Rice Noodle",
             "zh": "乾炒牛河",
-            "vi": ""
+            "vi": "Hủ Tiếu Thịt Bò Xào Khô"
           },
           "price": "12.95"
         },
@@ -549,7 +553,7 @@
           "name": {
             "en": "Stir Fried Beef with Flat Rice Noodle in Black Bean Sauce",
             "zh": "豉椒炒牛河",
-            "vi": ""
+            "vi": "Hủ Tiếu Thịt Bò Với Sốt Tầu Xì"
           },
           "price": "12.95"
         },
@@ -558,7 +562,7 @@
           "name": {
             "en": "Thai Style Stir Fried Flat Rice Noodle",
             "zh": "泰式炒河",
-            "vi": ""
+            "vi": "Hủ Tiếu Xào Cá mặn kiểu Thái"
           },
           "price": "12.95"
         },
@@ -567,7 +571,7 @@
           "name": {
             "en": "Singapore Style Stir Fried Curry Rice Noodle",
             "zh": "星洲炒米",
-            "vi": ""
+            "vi": "Hủ Tiếu Xào Cá mặn kiểu Thái"
           },
           "price": "13.95"
         },
@@ -576,7 +580,7 @@
           "name": {
             "en": "Mixed Meat with Vegetables on Fried Noodle",
             "zh": "雜燴炒麵",
-            "vi": ""
+            "vi": "Mì Chiên Dòn Xào Thịt và Đồ Biển Tươi"
           },
           "price": "13.95"
         },
@@ -585,7 +589,7 @@
           "name": {
             "en": "Stir Fried Seafood Noodle",
             "zh": "三鮮炒麵",
-            "vi": ""
+            "vi": "Mì Chiên Dòn Xào với 3 Loại Đồ Bểin Tươi"
           },
           "price": "15.95"
         },
@@ -594,7 +598,7 @@
           "name": {
             "en": "Yang Chow Fried Rice",
             "zh": "揚州炒飯",
-            "vi": ""
+            "vi": "Cơm Chiên Dương Châu"
           },
           "price": "12.95"
         },
@@ -603,7 +607,7 @@
           "name": {
             "en": "Home Style Stir Fried Meat with Rice Noodle",
             "zh": "家鄉炒米粉",
-            "vi": ""
+            "vi": "Hủ Tiếu Bột Gạo Xào Thịt"
           },
           "price": "13.95"
         },
@@ -612,7 +616,7 @@
           "name": {
             "en": "Stir Fried Yee Mein",
             "zh": "乾燒伊麵",
-            "vi": ""
+            "vi": "Mì Kéo Tay Xào với Sốt Khô"
           },
           "price": "13.95"
         },
@@ -621,7 +625,7 @@
           "name": {
             "en": "Salty Fish & Chicken Fried Rice",
             "zh": "咸魚雞粒炒飯",
-            "vi": ""
+            "vi": "Cơm Chiên Cá Mặn & Thịt Gà"
           },
           "price": "13.95"
         },
@@ -630,7 +634,7 @@
           "name": {
             "en": "Snow White Fried Rice (Dried Scallop)",
             "zh": "瑤柱蛋白炒飯",
-            "vi": ""
+            "vi": "Cơm Chiên Đồ biển Tưởi kiểu Nhật"
           },
           "price": "14.95"
         },
@@ -639,7 +643,7 @@
           "name": {
             "en": "Seafood Fried Rice with XO Sauce",
             "zh": "XO醬海鮮炒飯",
-            "vi": ""
+            "vi": "Cơm Chiên Bạch Tuyết (Đồ Biển Tươi)"
           },
           "price": "14.95"
         },
@@ -648,7 +652,7 @@
           "name": {
             "en": "Japanese Style Seafood on Rice",
             "zh": "日式魚子海皇飯",
-            "vi": ""
+            "vi": "Cơm Chiên Đổ Biển Tươi kiểu Nhật"
           },
           "price": "14.95"
         },
@@ -657,7 +661,7 @@
           "name": {
             "en": "Fried Rice with Mixed Meat & Vegetables on Sauce",
             "zh": "福建炒飯",
-            "vi": ""
+            "vi": "Cơm Chiên Sốt Phúc Kiến"
           },
           "price": "14.95"
         }
@@ -672,7 +676,7 @@
           "name": {
             "en": "Fish Congee",
             "zh": "魚片粥",
-            "vi": ""
+            "vi": "Cháo Cá"
           },
           "price": "8.95"
         },
@@ -681,7 +685,7 @@
           "name": {
             "en": "Clam Congee",
             "zh": "蜆粥",
-            "vi": ""
+            "vi": "Cháo Nghêu"
           },
           "price": "9.95"
         },
@@ -690,7 +694,7 @@
           "name": {
             "en": "Chicken & Mushroom Congee",
             "zh": "冬菇雞粥",
-            "vi": ""
+            "vi": "Cháo Gà Nấm Đông Cô"
           },
           "price": "7.95"
         },
@@ -699,7 +703,7 @@
           "name": {
             "en": "Shredded Pork with Preserved Egg Congee",
             "zh": "皮蛋瘦肉粥",
-            "vi": ""
+            "vi": "Cháo Trứng Bách Thảo Thịt Nạt"
           },
           "price": "7.95"
         },
@@ -708,7 +712,7 @@
           "name": {
             "en": "Seafood Congee",
             "zh": "海皇粥",
-            "vi": ""
+            "vi": "Cháo Hải Sản"
           },
           "price": "9.95"
         },
@@ -717,7 +721,7 @@
           "name": {
             "en": "Chiu Chow Style Oyster Congee",
             "zh": "潮州蠔粥",
-            "vi": ""
+            "vi": "Cháo Hào Tiều Châu"
           },
           "price": "10.95"
         },
@@ -726,7 +730,7 @@
           "name": {
             "en": "Chiu Chow Style Pan Fried Oyster & Egg",
             "zh": "潮式煎蠔餅",
-            "vi": ""
+            "vi": "Hào Chiên Tiều Châu"
           },
           "price": "13.95"
         },
@@ -735,7 +739,7 @@
           "name": {
             "en": "Salt & Pepper Tiny White Fish",
             "zh": "椒鹽白飯魚",
-            "vi": ""
+            "vi": "Cá Cơm Muối Tiêu"
           },
           "price": "12.95"
         },
@@ -744,7 +748,7 @@
           "name": {
             "en": "Salt & Pepper Japanese Fish",
             "zh": "椒鹽多春魚",
-            "vi": ""
+            "vi": "Cá Trứng Muôi Tiêu"
           },
           "price": "13.95"
         },
@@ -753,7 +757,7 @@
           "name": {
             "en": "Crispy Fried Pork Intestine",
             "zh": "脆皮炸大腸",
-            "vi": ""
+            "vi": "Vè Giòn Chiên"
           },
           "price": "12.95"
         },
@@ -762,7 +766,7 @@
           "name": {
             "en": "Pan Fried Red Sole Fish in Soy Sauce",
             "zh": "煎封龍利魚",
-            "vi": ""
+            "vi": "Cá Chiên"
           },
           "price": "Current Price"
         },
@@ -771,7 +775,7 @@
           "name": {
             "en": "BBQ Pork Neck with Steamed Bun",
             "zh": "碳燒豬頸肉",
-            "vi": ""
+            "vi": "Thịt Cổ Heo Nướng Than"
           },
           "price": "17.95"
         },
@@ -780,7 +784,7 @@
           "name": {
             "en": "XO Sauce Beef Short Ribs",
             "zh": "XO醬牛仔骨",
-            "vi": ""
+            "vi": "Sốt XO Sướn Bò Non"
           },
           "price": "17.95"
         },
@@ -789,7 +793,7 @@
           "name": {
             "en": "Clams in Black Bean Sauce",
             "zh": "豉汁炒蜆",
-            "vi": ""
+            "vi": "Nghêu Xào Sốt Tàu Xì"
           },
           "price": "17.95"
         },
@@ -798,7 +802,7 @@
           "name": {
             "en": "Spicy Clams Hot Pot",
             "zh": "香辣蜆煲",
-            "vi": ""
+            "vi": "Tay Cấm Nghêu Thơm Cay"
           },
           "price": "17.95"
         },
@@ -807,7 +811,7 @@
           "name": {
             "en": "Satay Beef Short Ribs",
             "zh": "沙爹蜜椒牛仔骨",
-            "vi": ""
+            "vi": "Bò Satê"
           },
           "price": "17.95"
         },
@@ -816,7 +820,7 @@
           "name": {
             "en": "Green Beans with Ground Pork in XO Sauce",
             "zh": "XO肉鬆四季豆",
-            "vi": ""
+            "vi": "Đậu Xào Sốt XO"
           },
           "price": "14.95"
         },
@@ -825,7 +829,7 @@
           "name": {
             "en": "Goose Feet, Sliced Top Shell & Mushroom",
             "zh": "鵝掌北菇螺鮑片",
-            "vi": ""
+            "vi": "Chân Ngỗng Nấu Nấm Đông Cô và Nấm Bào Ngư"
           },
           "price": "24.95"
         },
@@ -834,7 +838,7 @@
           "name": {
             "en": "Deep Fried Shrimp with Salty Egg Yolk",
             "zh": "金沙蝦",
-            "vi": ""
+            "vi": "Tôm Kim Sa ( Trứng Vịt Muối )"
           },
           "price": "16.95"
         },
@@ -843,7 +847,7 @@
           "name": {
             "en": "Prawns & Mushroom in Black Pepper Sauce",
             "zh": "百菌黑椒焗中蝦",
-            "vi": ""
+            "vi": "Tôm và Nấm Xào Sốt Tiêu Đen"
           },
           "price": "16.95"
         },
@@ -852,7 +856,7 @@
           "name": {
             "en": "Pan Fried Jackfish with Maggie Sauce",
             "zh": "美極沙猛魚",
-            "vi": ""
+            "vi": "Cá Chiên Maggie"
           },
           "price": "18.95"
         },
@@ -861,7 +865,7 @@
           "name": {
             "en": "BBQ Eggplants with Shrimp Paste",
             "zh": "原條燒茄子",
-            "vi": ""
+            "vi": "Cà Tím Nướng"
           },
           "price": "17.95"
         },
@@ -870,7 +874,7 @@
           "name": {
             "en": "Fried 3 Kinds of Onion with Sliced Lamb",
             "zh": "三蔥爆羊片",
-            "vi": ""
+            "vi": "Thịt Dê Xào Hành"
           },
           "price": "17.95"
         },
@@ -879,7 +883,7 @@
           "name": {
             "en": "Fried Soft Shell Crab with Salt Egg Yolk",
             "zh": "咸蛋黃軟殼蟹",
-            "vi": ""
+            "vi": "Cua Lột Trứng Muối"
           },
           "price": "20.95"
         },
@@ -888,7 +892,7 @@
           "name": {
             "en": "Lamb Hot Pot",
             "zh": "羊腩煲",
-            "vi": ""
+            "vi": "Lẩu Dê"
           },
           "price": "24.95"
         },
@@ -897,7 +901,7 @@
           "name": {
             "en": "Shrimp Egg Tofu with Broccoli",
             "zh": "百花煎釀玉子豆腐",
-            "vi": ""
+            "vi": "Đậu Hủ Non Bách Hoa"
           },
           "price": "18.95"
         },
@@ -906,7 +910,7 @@
           "name": {
             "en": "Shrimp Ball",
             "zh": "蝦丸",
-            "vi": ""
+            "vi": "Tôm Viên Chiên"
           },
           "price": "4.95"
         },
@@ -915,7 +919,7 @@
           "name": {
             "en": "Crab Claw (Shrimp Ball)",
             "zh": "蟹鉗",
-            "vi": ""
+            "vi": "Càng Cua"
           },
           "price": "6.95"
         },
@@ -924,7 +928,7 @@
           "name": {
             "en": "Abalone in Oyster Sauce",
             "zh": "蠔皇大鮑魚",
-            "vi": ""
+            "vi": "Bào Ngư Dầu Hào"
           },
           "price": "56.95"
         },
@@ -933,7 +937,7 @@
           "name": {
             "en": "Deep Fried Marinated Pigeon",
             "zh": "乳鴿",
-            "vi": ""
+            "vi": "Bồ Câu Chiên"
           },
           "price": "Current Price"
         }
