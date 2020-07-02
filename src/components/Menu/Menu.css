@@ -48,8 +48,10 @@
   justify-content: space-evenly;
   border: 1px solid #eee;
   border-radius: 5px;
-  padding: 10px;
-  margin: 0 50px;
+  padding: 10px 5px;
+  margin: auto;
+  width: fit-content;
+  text-align: center;
 }
 
 .menu .languages button {
@@ -59,10 +61,11 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.5s;
+  margin: 0 5px;
 }
 
 .menu .languages button.active {
-  background-color: #555;
+  background-color: #3c925b;
   color: #fff;
   transition: 0.5s;
 }
@@ -175,6 +178,6 @@
   }
 
   .menu.lower {
-    margin-top: 35px;
+    margin-top: 40px;
   }
 }
