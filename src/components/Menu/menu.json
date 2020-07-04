@@ -498,7 +498,7 @@
           "name": {
             "en": "One Course",
             "zh": "京式片皮鴨一食",
-            "vi": ""
+            "vi": "One Course"
           },
           "price": "32.95"
         },
@@ -507,7 +507,7 @@
           "name": {
             "en": "Two Courses",
             "zh": "京式片皮鴨二食",
-            "vi": ""
+            "vi": "Two Courses"
           },
           "price": "37.95"
         },
@@ -516,7 +516,7 @@
           "name": {
             "en": "Three Courses",
             "zh": "京式片皮鴨三食",
-            "vi": ""
+            "vi": "Three Courses"
           },
           "price": "42.95"
         }
@@ -668,7 +668,11 @@
       ]
     },
     {
-      "name": { "en": "Late Night Snack", "zh": "宵夜打冷", "vi": "" },
+      "name": {
+        "en": "Late Night Snack",
+        "zh": "宵夜打冷",
+        "vi": "Late Night Snack"
+      },
       "image": "images/late-night-snack.jpg",
       "items": [
         {
