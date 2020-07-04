@@ -16,7 +16,6 @@
   left: 0;
   right: 0;
   overflow-y: auto;
-  animation: fadein 1s;
 }
 
 @media screen and (max-width: 800px) {

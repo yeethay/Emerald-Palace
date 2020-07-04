@@ -28,6 +28,7 @@ interface IItem {
 }
 
 const TakeoutMenu = () => {
+  const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>(
     menu.categories[0]
   );
@@ -44,8 +45,13 @@ const TakeoutMenu = () => {
   }, []);
 
   return (
-    <div className="menu">
-      <Banner message={menu.delivery} tooltipMessages={menu.discounts}></Banner>
+    <div className={`menu ${showBanner && 'lower'}`}>
+      <Banner
+        show={showBanner}
+        setShow={setShowBanner}
+        message={menu.delivery}
+        tooltipMessages={menu.discounts}
+      ></Banner>
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-300)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
