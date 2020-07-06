@@ -7,6 +7,7 @@
   background-size: cover;
   position: absolute;
   z-index: -1;
+  animation: fadein 1s;
 }
 
 .center {
@@ -20,7 +21,6 @@
 
 .center .name {
   font-size: 76px;
-  color: #000;
   display: block;
 }
 
@@ -31,7 +31,6 @@
 .center .contact-info {
   margin-top: 30px;
   font-size: 20px;
-  color: #000;
   font-weight: 600;
 }
 

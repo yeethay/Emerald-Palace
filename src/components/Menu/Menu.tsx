@@ -34,6 +34,8 @@ enum Languages {
 }
 
 const Menu = () => {
+  const [language, setLanguage] = useState(Languages.ENGLISH);
+  const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>(
     menu.categories[0]
   );
@@ -50,8 +52,33 @@ const Menu = () => {
   }, []);
 
   return (
-    <div className="menu">
-      <Banner message={menu.delivery} tooltipMessages={menu.discounts} />
+    <div className={`menu ${showBanner && 'lower'}`}>
+      <Banner
+        show={showBanner}
+        setShow={setShowBanner}
+        message={menu.delivery}
+        tooltipMessages={menu.discounts}
+      />
+      <div className="languages">
+        <button
+          className={`${language === Languages.ENGLISH && 'active'}`}
+          onClick={() => setLanguage(Languages.ENGLISH)}
+        >
+          English
+        </button>
+        <button
+          className={`${language === Languages.CHINESE && 'active'}`}
+          onClick={() => setLanguage(Languages.CHINESE)}
+        >
+          繁體中文
+        </button>
+        <button
+          className={`${language === Languages.VIETNAMESE && 'active'}`}
+          onClick={() => setLanguage(Languages.VIETNAMESE)}
+        >
+          Tiếng Việt
+        </button>
+      </div>
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-500)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
@@ -69,8 +96,7 @@ const Menu = () => {
               }}
               onClick={() => setActiveCategory(category)}
             >
-              <span>{category.name[Languages.CHINESE]}</span>
-              <span>{category.name[Languages.ENGLISH]}</span>
+              <span>{category.name[language]}</span>
             </div>
           ))}
         </div>
@@ -80,13 +106,11 @@ const Menu = () => {
       </div>
       <div className="active-category">
         <div className="flex row">
-          <h1>{activeCategory.name[Languages.CHINESE]}</h1>
-          <h1>{activeCategory.name[Languages.ENGLISH]}</h1>
+          <h1>{activeCategory.name[language]}</h1>
         </div>
         {activeCategory.description && (
           <div className="description">
-            <span>{activeCategory.description[Languages.CHINESE]}</span>
-            <span>{activeCategory.description[Languages.ENGLISH]}</span>
+            <span>{activeCategory.description[language]}</span>
           </div>
         )}
         <table>
@@ -96,8 +120,7 @@ const Menu = () => {
                 <tr key={index}>
                   <td className="number">{number}</td>
                   <td className="name">
-                    <span>{name[Languages.CHINESE]}</span>
-                    <span>{name[Languages.ENGLISH]}</span>
+                    <span>{name[language]}</span>
                   </td>
                   <td className="price">{price}</td>
                 </tr>
