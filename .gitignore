@@ -25,3 +25,6 @@ yarn-error.log*
 
 # vim
 *.s[a-w][a-z]
+
+# firebase hosting
+.firebase/*
