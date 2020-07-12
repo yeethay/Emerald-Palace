@@ -1,7 +1,9 @@
 .home {
-  background-image: url(/Emerald-Palace/images/background.jpg);
-  background-color: #a4cfb4;
-  background-blend-mode: screen;
+  background-image: linear-gradient(
+      rgba(150, 180, 150, 0.9),
+      rgba(150, 180, 150, 0.9)
+    ),
+    url(/Emerald-Palace/images/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,8 +16,29 @@
   margin-top: -150px;
   position: absolute;
   text-align: center;
-  top: 50%;
+  top: 45%;
   width: 100%;
+}
+
+.center .logo {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  background-color: #ffff00;
+  margin: auto;
+  border-radius: 50%;
+  background-image: url(/Emerald-Palace/images/logo.png);
+  background-repeat: no-repeat;
+  background-size: 80px;
+  background-position: 50% 15%;
+}
+
+.center .logo span {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  font-size: 1.8em;
+  padding: 0 31px;
 }
 
 .center .name {
@@ -26,18 +49,19 @@
 
 .center .description {
   font-size: 26px;
+  color: #000;
 }
 
 .center .contact-info {
   margin-top: 30px;
   font-size: 20px;
-  color: #000;
   font-weight: 600;
 }
 
 .center .contact-info * {
   display: block;
   padding: 10px 0;
+  color: #000;
 }
 
 @media screen and (max-width: 800px) {
