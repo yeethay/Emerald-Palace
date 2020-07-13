@@ -6,8 +6,8 @@ import './Banner.css';
 interface IProps {
   show: boolean;
   setShow: Dispatch<SetStateAction<boolean>>;
-  message: string;
-  tooltipMessages: string[];
+  message?: string;
+  tooltipMessages?: string[];
 }
 
 const Banner = (props: IProps) => {
@@ -16,12 +16,12 @@ const Banner = (props: IProps) => {
 
   const toggleTooltip = () => setTooltipHidden(!tooltipHidden);
 
-  return (
+  return message ? (
     <div className={`banner ${!show && 'dismissed'}`}>
       <div onMouseEnter={toggleTooltip} onMouseLeave={toggleTooltip}>
         <FontAwesomeIcon icon={faInfoCircle} />
         <div className={`tooltip ${tooltipHidden && 'hidden'}`}>
-          {tooltipMessages.map((message, index) => (
+          {tooltipMessages?.map((message, index) => (
             <li key={index}>{message}</li>
           ))}
         </div>
@@ -31,7 +31,7 @@ const Banner = (props: IProps) => {
         ✕
       </div>
     </div>
-  );
+  ) : null;
 };
 
 export default Banner;
