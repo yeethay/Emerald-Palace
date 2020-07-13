@@ -46,8 +46,9 @@ const Menu = () => {
   const [activeCategory, setActiveCategory] = useState<ICategory>();
   const sliderRef = useRef<HTMLDivElement>(null);
   const [menu, setMenu] = useState<IMenu>();
-  const [images, setImages] = useState<any>({});
-  // const [images, setImages] = useState<Map<string, string>>();
+  const [images, setImages] = useState<{ [key: string]: string }>({});
+  const storage = firebase.storage!();
+  const storageRef = storage.ref();
 
   const scroll = (amount: number) =>
     sliderRef.current?.scrollTo({
@@ -61,8 +62,6 @@ const Menu = () => {
 
   useEffect(() => {
     const getMenuJson = async () => {
-      const storage = firebase.storage!();
-      const storageRef = storage.ref();
       const storageUrl = await storageRef.child('menu.json').getDownloadURL();
       const res = await fetch(storageUrl);
       const data = await res.json();
@@ -79,15 +78,19 @@ const Menu = () => {
   useEffect(() => {
     const getImagesFromMenuJson = async () => {
       menu?.categories.forEach(async (category) => {
-        const storage = firebase.storage!();
-        const storageRef = storage.ref();
-        const storageUrl = await storageRef
+        const imageUrl = await storageRef
           .child(category.image)
           .getDownloadURL();
-        // setImages({ ...images, [category.image]: storageUrl });
+        setImages((images) => {
+          return { ...images, [category.image]: imageUrl };
+        });
       });
     };
-    getImagesFromMenuJson();
+    try {
+      getImagesFromMenuJson();
+    } catch (err) {
+      console.error(err);
+    }
   }, [menu]);
 
   return (
