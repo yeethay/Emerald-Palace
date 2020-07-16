@@ -2,43 +2,19 @@ import React, { useState, useRef, useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  ICategory,
+  IItem,
+  IMenu,
+  IMultiLanguageString,
+  Languages,
+} from '../../types/types';
+import {
   faChevronLeft,
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 import firebase from '@firebase/app';
 import '@firebase/storage';
-
-interface ICategory {
-  name: IMultiLanguageString;
-  image: string;
-  items: IItem[];
-  description?: IMultiLanguageString;
-}
-
-interface IMultiLanguageString {
-  en: string;
-  zh: string;
-  vi: string;
-}
-
-interface IItem {
-  number: string;
-  name: IMultiLanguageString;
-  price: string;
-}
-
-interface IMenu {
-  delivery: string;
-  discounts: string[];
-  categories: ICategory[];
-}
-
-enum Languages {
-  ENGLISH = 'en',
-  CHINESE = 'zh',
-  VIETNAMESE = 'vi',
-}
 
 const Menu = () => {
   const [language, setLanguage] = useState(Languages.ENGLISH);
@@ -47,8 +23,6 @@ const Menu = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
   const [menu, setMenu] = useState<IMenu>();
   const [images, setImages] = useState<{ [key: string]: string }>({});
-  const storage = firebase.storage!();
-  const storageRef = storage.ref();
 
   const scroll = (amount: number) =>
     sliderRef.current?.scrollTo({
@@ -62,6 +36,8 @@ const Menu = () => {
 
   useEffect(() => {
     const getMenuJson = async () => {
+      const storage = firebase.storage!();
+      const storageRef = storage.ref();
       const storageUrl = await storageRef.child('menu.json').getDownloadURL();
       const res = await fetch(storageUrl);
       const data = await res.json();
@@ -77,6 +53,8 @@ const Menu = () => {
 
   useEffect(() => {
     const getImagesFromMenuJson = async () => {
+      const storage = firebase.storage!();
+      const storageRef = storage.ref();
       menu?.categories.forEach(async (category) => {
         const imageUrl = await storageRef
           .child(category.image)
@@ -141,7 +119,7 @@ const Menu = () => {
                 }}
                 onClick={() => setActiveCategory(category)}
               >
-                <span>{category.name[language]}</span>
+                <span>{(category.name as IMultiLanguageString)[language]}</span>
               </div>
             );
           })}
@@ -152,7 +130,9 @@ const Menu = () => {
       </div>
       <div className="active-category">
         <div className="flex row">
-          <h1>{activeCategory?.name[language]}</h1>
+          {activeCategory && (
+            <h1>{(activeCategory?.name as IMultiLanguageString)[language]}</h1>
+          )}
         </div>
         {activeCategory?.description && (
           <div className="description">
@@ -166,7 +146,7 @@ const Menu = () => {
                 <tr key={index}>
                   <td className="number">{number}</td>
                   <td className="name">
-                    <span>{name[language]}</span>
+                    <span>{(name as IMultiLanguageString)[language]}</span>
                   </td>
                   <td className="price">{price}</td>
                 </tr>
