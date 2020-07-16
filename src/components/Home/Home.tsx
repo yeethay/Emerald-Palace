@@ -10,7 +10,9 @@ const Home = () => {
   return (
     <div className="home">
       <div className="center">
-        <span className="name">{home.name.zh}</span>
+        <div className="logo">
+          <span>{home.name.zh}</span>
+        </div>
         <span className="name">{home.name.en.toUpperCase()}</span>
         <span className="description">{home.description.toUpperCase()}</span>
         <div className="contact-info">
