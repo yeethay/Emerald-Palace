@@ -43,13 +43,11 @@
 
 .center .name {
   font-size: 76px;
-  color: #000;
   display: block;
 }
 
 .center .description {
   font-size: 26px;
-  color: #000;
 }
 
 .center .contact-info {
@@ -61,7 +59,6 @@
 .center .contact-info * {
   display: block;
   padding: 10px 0;
-  color: #000;
 }
 
 @media screen and (max-width: 800px) {
