@@ -10,11 +10,11 @@ import './Menu.css';
 import firebase from '@firebase/app';
 import '@firebase/storage';
 
-const TakeoutMenu = () => {
+const TakeoutMenu = (props: { menu?: IMenu }) => {
+  const { menu } = props;
   const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>();
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [menu, setMenu] = useState<IMenu>();
   const [images, setImages] = useState<{ [key: string]: string }>({});
 
   const scroll = (amount: number) =>
@@ -28,23 +28,8 @@ const TakeoutMenu = () => {
   }, []);
 
   useEffect(() => {
-    const getMenuJson = async () => {
-      const storage = firebase.storage!();
-      const storageRef = storage.ref();
-      const storageUrl = await storageRef
-        .child('takeout-menu.json')
-        .getDownloadURL();
-      const res = await fetch(storageUrl);
-      const data = await res.json();
-      setMenu(data);
-      setActiveCategory(data.categories[0]);
-    };
-    try {
-      getMenuJson();
-    } catch (error) {
-      console.error(error);
-    }
-  }, []);
+    setActiveCategory(menu?.categories[0]);
+  }, [menu]);
 
   useEffect(() => {
     const getImagesFromMenuJson = async () => {

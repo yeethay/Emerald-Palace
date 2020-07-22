@@ -16,12 +16,12 @@ import './Menu.css';
 import firebase from '@firebase/app';
 import '@firebase/storage';
 
-const Menu = () => {
+const Menu = (props: { menu?: IMenu }) => {
+  const { menu } = props;
   const [language, setLanguage] = useState(Languages.ENGLISH);
   const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>();
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [menu, setMenu] = useState<IMenu>();
   const [images, setImages] = useState<{ [key: string]: string }>({});
 
   const scroll = (amount: number) =>
@@ -31,24 +31,11 @@ const Menu = () => {
     });
 
   useEffect(() => {
-    document.title = 'Menu | Emerald Palace';
-  }, []);
+    setActiveCategory(menu?.categories[0]);
+  }, [menu]);
 
   useEffect(() => {
-    const getMenuJson = async () => {
-      const storage = firebase.storage!();
-      const storageRef = storage.ref();
-      const storageUrl = await storageRef.child('menu.json').getDownloadURL();
-      const res = await fetch(storageUrl);
-      const data = await res.json();
-      setMenu(data);
-      setActiveCategory(data.categories[0]);
-    };
-    try {
-      getMenuJson();
-    } catch (error) {
-      console.error(error);
-    }
+    document.title = 'Menu | Emerald Palace';
   }, []);
 
   useEffect(() => {

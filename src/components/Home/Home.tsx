@@ -4,29 +4,11 @@ import firebase from '@firebase/app';
 import '@firebase/storage';
 import { IRestaurant } from '../../types/types';
 
-const Home = () => {
-  const [restaurant, setRestaurant] = useState<IRestaurant>();
+const Home = (props: { restaurant?: IRestaurant }) => {
+  const { restaurant } = props;
 
   useEffect(() => {
     document.title = 'Emerald Palace';
-  }, []);
-
-  useEffect(() => {
-    const getRestaurantJson = async () => {
-      const storage = firebase.storage!();
-      const storageRef = storage.ref();
-      const storageUrl = await storageRef
-        .child('restaurant.json')
-        .getDownloadURL();
-      const res = await fetch(storageUrl);
-      const data = await res.json();
-      setRestaurant(data);
-    };
-    try {
-      getRestaurantJson();
-    } catch (error) {
-      console.error(error);
-    }
   }, []);
 
   return (
