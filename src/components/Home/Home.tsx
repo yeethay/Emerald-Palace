@@ -1,7 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import './Home.css';
-import firebase from '@firebase/app';
-import '@firebase/storage';
 import { IRestaurant } from '../../types/types';
 
 const Home = (props: { restaurant?: IRestaurant }) => {

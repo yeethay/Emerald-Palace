@@ -7,8 +7,7 @@ const storageRetriever = async (fileName: string) => {
     const storageRef = storage.ref();
     const storageUrl = await storageRef.child(fileName).getDownloadURL();
     const res = await fetch(storageUrl);
-    const data = await res.json();
-    return data;
+    return res.json();
   } catch (error) {
     console.error(error);
   }

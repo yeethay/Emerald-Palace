@@ -39,7 +39,7 @@ function App() {
               <TakeoutMenu menu={takeoutMenu} />
             </Route>
             <Route path="/contact">
-              <Contact />
+              <Contact restaurant={restaurant} />
             </Route>
             <Route path="/">
               <Home restaurant={restaurant} />
