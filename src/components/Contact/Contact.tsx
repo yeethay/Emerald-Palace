@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import contact from './contact.json';
 import './Contact.css';
+import { Location } from '../../types/types';
+import { IRestaurant } from '../../types/types';
 
 declare global {
   interface Window {
@@ -8,14 +9,10 @@ declare global {
   }
 }
 
-interface Location {
-  lat: number;
-  lng: number;
-}
-
 const GOOGLE_MAP_API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY;
 
-const Contact = () => {
+const Contact = (props: { restaurant?: IRestaurant }) => {
+  const { restaurant } = props;
   let googleMapRef = useRef<HTMLDivElement>(null);
   let googleMap = useRef<google.maps.Map>();
   let marker = useRef<google.maps.Marker>();
@@ -44,6 +41,14 @@ const Contact = () => {
       googleMap.current = createGoogleMap();
       marker.current = createMarker();
     });
+
+    return () => {
+      window.document.body.removeChild(googleMapScript);
+      googleMapScript.removeEventListener('load', () => {
+        googleMap.current = createGoogleMap();
+        marker.current = createMarker();
+      });
+    };
   }, []);
 
   useEffect(() => {
@@ -58,8 +63,8 @@ const Contact = () => {
         <div className="contact-info">
           <div className="section">
             <h3>LOCATION</h3>
-            <a href={contact.location.href}>
-              {contact.location.address.split(',').map((line, index) => (
+            <a href={restaurant?.location.href}>
+              {restaurant?.location.address.split(',').map((line, index) => (
                 <span key={index} className="address">
                   {line}
                 </span>
@@ -68,18 +73,18 @@ const Contact = () => {
           </div>
           <div className="section">
             <h3>PHONE</h3>
-            <a href={contact.phone.href}>{contact.phone.label}</a>
+            <a href={restaurant?.phone.href}>{restaurant?.phone.label}</a>
           </div>
           <div className="section">
             <h3>HOURS</h3>
             <div className="times">
               <ul className="days">
-                {contact.hours.map((item, index) => (
+                {restaurant?.hours.map((item, index) => (
                   <li key={index}>{item.day}</li>
                 ))}
               </ul>
               <ul className="hours">
-                {contact.hours.map((item, index) => (
+                {restaurant?.hours.map((item, index) => (
                   <li key={index}>{item.hours}</li>
                 ))}
               </ul>

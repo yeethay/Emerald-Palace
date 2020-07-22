@@ -4,6 +4,8 @@
   "private": true,
   "homepage": "https://YYC-HALT.github.io/Emerald-Palace",
   "dependencies": {
+    "@firebase/app": "^0.6.8",
+    "@firebase/storage": "^0.3.38",
     "@fortawesome/fontawesome-svg-core": "^1.2.28",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@fortawesome/react-fontawesome": "^0.1.9",
