@@ -12,7 +12,9 @@ const Home = (props: { restaurant?: IRestaurant }) => {
   return (
     <div className="home">
       <div className="center">
-        <span className="name">{restaurant?.name.zh}</span>
+        <div className="logo">
+          <span>{restaurant?.name.zh}</span>
+        </div>
         <span className="name">{restaurant?.name.en.toUpperCase()}</span>
         <span className="description">
           {restaurant?.description.toUpperCase()}
