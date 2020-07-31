@@ -7,15 +7,17 @@ import TakeoutMenu from './components/Menu/TakeoutMenu';
 import Contact from './components/Contact/Contact';
 import './App.css';
 import FirebaseHelper from './FirebaseHelper';
-import { IMenu, IRestaurant } from './types/types';
+import { IMenu, IRestaurant, ICategory } from './types/types';
 
 function App() {
   const [ready, setReady] = useState(false);
   const [menu, setMenu] = useState<IMenu>();
   const [menuPdfUrl, setMenuPdfUrl] = useState<string>();
+  const [images, setImages] = useState<{ [key: string]: string }>({});
   const [takeoutMenu, setTakeoutMenu] = useState<IMenu>();
   const [takeoutMenuPdfUrl, setTakeoutMenuPdfUrl] = useState<string>();
   const [restaurant, setRestaurant] = useState<IRestaurant>();
+  const [backgroundUrl, setBackgroundUrl] = useState<string>();
 
   useEffect(() => {
     const filePaths = {
@@ -24,6 +26,7 @@ function App() {
       takeoutMenuJson: process.env.REACT_APP_TAKEOUT_MENU_JSON_PATH as string,
       takeoutMenuPdf: process.env.REACT_APP_TAKEOUT_MENU_PDF_PATH as string,
       restaurantJson: process.env.REACT_APP_RESTAURANT_JSON_PATH as string,
+      backgroundImage: process.env.REACT_APP_BACKGROUND_IMAGE_PATH as string,
     };
 
     const getAllFiles = async () => {
@@ -33,15 +36,36 @@ function App() {
       const takeoutMenuJson = await fh.getJson(filePaths.takeoutMenuJson);
       const takeoutMenuPdf = await fh.getDownloadUrl(filePaths.takeoutMenuPdf);
       const restaurantJson = await fh.getJson(filePaths.restaurantJson);
+      const background = await fh.getDownloadUrl(filePaths.backgroundImage);
       setMenu(menuJson);
       setMenuPdfUrl(menuPdf);
       setTakeoutMenu(takeoutMenuJson);
       setTakeoutMenuPdfUrl(takeoutMenuPdf);
       setRestaurant(restaurantJson);
+      setBackgroundUrl(background);
       setReady(true);
     };
     getAllFiles();
   }, []);
+
+  useEffect(() => {
+    const getImagesFromMenuJson = async () => {
+      const fh = new FirebaseHelper();
+      const updateImageMap = async (category: ICategory) => {
+        const imageUrl = await fh.getDownloadUrl(category.image);
+        setImages((prev) => {
+          return { ...prev, [category.image]: imageUrl };
+        });
+      };
+      menu?.categories.forEach(updateImageMap);
+      takeoutMenu?.categories.forEach(updateImageMap);
+    };
+    try {
+      getImagesFromMenuJson();
+    } catch (err) {
+      console.error(err);
+    }
+  }, [menu, takeoutMenu]);
 
   return (
     <Router basename="/Emerald-Palace/">
@@ -51,16 +75,20 @@ function App() {
           <div className="main">
             <Switch>
               <Route path="/menu">
-                <Menu menu={menu} pdf={menuPdfUrl} />
+                <Menu menu={menu} pdf={menuPdfUrl} images={images} />
               </Route>
               <Route path="/takeout-menu">
-                <TakeoutMenu menu={takeoutMenu} pdf={takeoutMenuPdfUrl} />
+                <TakeoutMenu
+                  menu={takeoutMenu}
+                  pdf={takeoutMenuPdfUrl}
+                  images={images}
+                />
               </Route>
               <Route path="/contact">
                 <Contact restaurant={restaurant} />
               </Route>
               <Route path="/">
-                <Home restaurant={restaurant} />
+                <Home restaurant={restaurant} background={backgroundUrl} />
               </Route>
             </Switch>
           </div>

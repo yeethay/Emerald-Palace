@@ -7,14 +7,16 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
-import FirebaseHelper from '../../FirebaseHelper';
 
-const TakeoutMenu = (props: { menu?: IMenu; pdf?: string }) => {
-  const { menu, pdf } = props;
+const TakeoutMenu = (props: {
+  menu?: IMenu;
+  pdf?: string;
+  images?: { [key: string]: string };
+}) => {
+  const { menu, pdf, images } = props;
   const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>();
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [images, setImages] = useState<{ [key: string]: string }>({});
 
   const scroll = (amount: number) =>
     sliderRef.current?.scrollTo({
@@ -28,23 +30,6 @@ const TakeoutMenu = (props: { menu?: IMenu; pdf?: string }) => {
 
   useEffect(() => {
     setActiveCategory(menu?.categories[0]);
-  }, [menu]);
-
-  useEffect(() => {
-    const getImagesFromMenuJson = async () => {
-      const fh = new FirebaseHelper();
-      menu?.categories.forEach(async (category) => {
-        const imageUrl = await fh.getDownloadUrl(category.image);
-        setImages((images) => {
-          return { ...images, [category.image]: imageUrl };
-        });
-      });
-    };
-    try {
-      getImagesFromMenuJson();
-    } catch (err) {
-      console.error(err);
-    }
   }, [menu]);
 
   return (
@@ -71,7 +56,7 @@ const TakeoutMenu = (props: { menu?: IMenu; pdf?: string }) => {
               className="category"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${
-                  images[category.image]
+                  images![category.image]
                 })`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
