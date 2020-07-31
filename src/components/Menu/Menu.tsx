@@ -13,11 +13,10 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
-import firebase from '@firebase/app';
-import '@firebase/storage';
+import FirebaseHelper from '../../FirebaseHelper';
 
-const Menu = (props: { menu?: IMenu }) => {
-  const { menu } = props;
+const Menu = (props: { menu?: IMenu; pdf?: string }) => {
+  const { menu, pdf } = props;
   const [language, setLanguage] = useState(Languages.ENGLISH);
   const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>();
@@ -40,12 +39,9 @@ const Menu = (props: { menu?: IMenu }) => {
 
   useEffect(() => {
     const getImagesFromMenuJson = async () => {
-      const storage = firebase.storage!();
-      const storageRef = storage.ref();
+      const fh = new FirebaseHelper();
       menu?.categories.forEach(async (category) => {
-        const imageUrl = await storageRef
-          .child(category.image)
-          .getDownloadURL();
+        const imageUrl = await fh.getDownloadUrl(category.image);
         setImages((images) => {
           return { ...images, [category.image]: imageUrl };
         });
@@ -66,7 +62,7 @@ const Menu = (props: { menu?: IMenu }) => {
         message={menu?.delivery}
         tooltipMessages={menu?.discounts}
       />
-      <div className="languages">
+      <div className="options">
         <button
           className={`${language === Languages.ENGLISH && 'active'}`}
           onClick={() => setLanguage(Languages.ENGLISH)}
@@ -85,6 +81,10 @@ const Menu = (props: { menu?: IMenu }) => {
         >
           Tiếng Việt
         </button>
+        <div className="separator"></div>
+        <a href={pdf}>
+          <button>PDF Version</button>
+        </a>
       </div>
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-500)}>

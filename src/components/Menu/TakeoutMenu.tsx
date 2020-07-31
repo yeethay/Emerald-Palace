@@ -7,11 +7,10 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
-import firebase from '@firebase/app';
-import '@firebase/storage';
+import FirebaseHelper from '../../FirebaseHelper';
 
-const TakeoutMenu = (props: { menu?: IMenu }) => {
-  const { menu } = props;
+const TakeoutMenu = (props: { menu?: IMenu; pdf?: string }) => {
+  const { menu, pdf } = props;
   const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>();
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -33,12 +32,9 @@ const TakeoutMenu = (props: { menu?: IMenu }) => {
 
   useEffect(() => {
     const getImagesFromMenuJson = async () => {
-      const storage = firebase.storage!();
-      const storageRef = storage.ref();
+      const fh = new FirebaseHelper();
       menu?.categories.forEach(async (category) => {
-        const imageUrl = await storageRef
-          .child(category.image)
-          .getDownloadURL();
+        const imageUrl = await fh.getDownloadUrl(category.image);
         setImages((images) => {
           return { ...images, [category.image]: imageUrl };
         });
@@ -59,6 +55,11 @@ const TakeoutMenu = (props: { menu?: IMenu }) => {
         message={menu?.delivery}
         tooltipMessages={menu?.discounts}
       ></Banner>
+      <div className="options">
+        <a href={pdf}>
+          <button>PDF Version</button>
+        </a>
+      </div>
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-300)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
