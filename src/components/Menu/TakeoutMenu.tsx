@@ -56,7 +56,7 @@ const TakeoutMenu = (props: { menu?: IMenu; pdf?: string }) => {
         tooltipMessages={menu?.discounts}
       ></Banner>
       <div className="options">
-        <a href={pdf}>
+        <a href={pdf} target="_blank" rel="noopener noreferrer">
           <button>PDF Version</button>
         </a>
       </div>

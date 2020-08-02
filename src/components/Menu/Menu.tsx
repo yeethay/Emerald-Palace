@@ -82,7 +82,7 @@ const Menu = (props: { menu?: IMenu; pdf?: string }) => {
           Tiếng Việt
         </button>
         <div className="separator"></div>
-        <a href={pdf}>
+        <a href={pdf} target="_blank" rel="noopener noreferrer">
           <button>PDF Version</button>
         </a>
       </div>
