@@ -83,7 +83,7 @@ const Menu = (props: {
                 className="category"
                 style={{
                   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${
-                    images![category.image]
+                    images?.[category.image]
                   })`,
                   backgroundPosition: 'center',
                   backgroundSize: 'cover',
