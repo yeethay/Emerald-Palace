@@ -1,12 +1,4 @@
 .home {
-  background-image: linear-gradient(
-      rgba(150, 180, 150, 0.9),
-      rgba(150, 180, 150, 0.9)
-    ),
-    url(/Emerald-Palace/images/background.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   position: absolute;
   z-index: -1;
   animation: fadein 1s;
@@ -60,6 +52,8 @@
 .center .contact-info * {
   display: block;
   padding: 10px 0;
+  width: fit-content;
+  margin: auto;
 }
 
 @media screen and (max-width: 800px) {
