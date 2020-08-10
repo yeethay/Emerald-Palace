@@ -28,16 +28,39 @@ function App() {
 
     const getAllFiles = async () => {
       const fh = new FirebaseHelper();
-      const menuJson = await fh.getJson(filePaths.menuJson);
-      const menuPdf = await fh.getDownloadUrl(filePaths.menuPdf);
-      const takeoutMenuJson = await fh.getJson(filePaths.takeoutMenuJson);
-      const takeoutMenuPdf = await fh.getDownloadUrl(filePaths.takeoutMenuPdf);
-      const restaurantJson = await fh.getJson(filePaths.restaurantJson);
-      setMenu(menuJson);
-      setMenuPdfUrl(menuPdf);
-      setTakeoutMenu(takeoutMenuJson);
-      setTakeoutMenuPdfUrl(takeoutMenuPdf);
-      setRestaurant(restaurantJson);
+      try {
+        const menuJson = await fh.getJson(filePaths.menuJson);
+        setMenu(menuJson);
+      } catch (err) {
+        console.error(err);
+      }
+      try {
+        const menuPdf = await fh.getDownloadUrl(filePaths.menuPdf);
+        setMenuPdfUrl(menuPdf);
+      } catch (err) {
+        console.error(err);
+      }
+      try {
+        const takeoutMenuJson = await fh.getJson(filePaths.takeoutMenuJson);
+        setTakeoutMenu(takeoutMenuJson);
+      } catch (err) {
+        console.error(err);
+      }
+      try {
+        const takeoutMenuPdf = await fh.getDownloadUrl(
+          filePaths.takeoutMenuPdf
+        );
+        setTakeoutMenuPdfUrl(takeoutMenuPdf);
+      } catch (err) {
+        console.error(err);
+      }
+      try {
+        const restaurantJson = await fh.getJson(filePaths.restaurantJson);
+        setRestaurant(restaurantJson);
+      } catch (err) {
+        console.error(err);
+      }
+
       setReady(true);
     };
     getAllFiles();
