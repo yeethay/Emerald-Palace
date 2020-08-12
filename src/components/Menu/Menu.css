@@ -43,7 +43,7 @@
   content: '\00a0•\00a0';
 }
 
-.menu .languages {
+.menu .options {
   display: flex;
   justify-content: space-evenly;
   border: 1px solid #eee;
@@ -54,7 +54,7 @@
   text-align: center;
 }
 
-.menu .languages button {
+.menu .options button {
   background-color: #eee;
   border: none;
   padding: 10px;
@@ -64,10 +64,19 @@
   margin: 0 5px;
 }
 
-.menu .languages button.active {
+.menu .options button.active {
   background-color: #3c925b;
   color: #fff;
   transition: 0.5s;
+}
+
+.menu .options button:hover {
+  filter: brightness(85%);
+}
+
+.menu .options .separator {
+  border-left: 1px solid #eee;
+  margin: 0 5px;
 }
 
 .menu .slider-container {

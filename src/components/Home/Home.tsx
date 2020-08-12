@@ -2,15 +2,23 @@ import React, { useEffect } from 'react';
 import './Home.css';
 import { IRestaurant } from '../../types/types';
 
-const Home = (props: { restaurant?: IRestaurant }) => {
-  const { restaurant } = props;
+const Home = (props: { restaurant?: IRestaurant; background?: string }) => {
+  const { restaurant, background } = props;
 
   useEffect(() => {
     document.title = 'Emerald Palace';
   }, []);
 
   return (
-    <div className="home">
+    <div
+      className="home"
+      style={{
+        backgroundImage: `linear-gradient(rgba(150, 180, 150, 0.9), rgba(150, 180, 150, 0.9)), url(${background})`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+      }}
+    >
       <div className="center">
         <div className="logo">
           <span>{restaurant?.name.zh}</span>

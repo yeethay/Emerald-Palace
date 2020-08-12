@@ -7,15 +7,16 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
-import firebase from '@firebase/app';
-import '@firebase/storage';
 
-const TakeoutMenu = (props: { menu?: IMenu }) => {
-  const { menu } = props;
+const TakeoutMenu = (props: {
+  menu?: IMenu;
+  pdf?: string;
+  images?: { [key: string]: string };
+}) => {
+  const { menu, pdf, images } = props;
   const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>();
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [images, setImages] = useState<{ [key: string]: string }>({});
 
   const scroll = (amount: number) =>
     sliderRef.current?.scrollTo({
@@ -31,26 +32,6 @@ const TakeoutMenu = (props: { menu?: IMenu }) => {
     setActiveCategory(menu?.categories[0]);
   }, [menu]);
 
-  useEffect(() => {
-    const getImagesFromMenuJson = async () => {
-      const storage = firebase.storage!();
-      const storageRef = storage.ref();
-      menu?.categories.forEach(async (category) => {
-        const imageUrl = await storageRef
-          .child(category.image)
-          .getDownloadURL();
-        setImages((images) => {
-          return { ...images, [category.image]: imageUrl };
-        });
-      });
-    };
-    try {
-      getImagesFromMenuJson();
-    } catch (err) {
-      console.error(err);
-    }
-  }, [menu]);
-
   return (
     <div className={`menu ${showBanner && 'lower'}`}>
       <Banner
@@ -59,6 +40,11 @@ const TakeoutMenu = (props: { menu?: IMenu }) => {
         message={menu?.delivery}
         tooltipMessages={menu?.discounts}
       ></Banner>
+      <div className="options">
+        <a href={pdf} target="_blank" rel="noopener noreferrer">
+          <button>PDF Version</button>
+        </a>
+      </div>
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-300)}>
           <FontAwesomeIcon icon={faChevronLeft} size="lg" />
@@ -70,7 +56,7 @@ const TakeoutMenu = (props: { menu?: IMenu }) => {
               className="category"
               style={{
                 backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${
-                  images[category.image]
+                  images?.[category.image]
                 })`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',

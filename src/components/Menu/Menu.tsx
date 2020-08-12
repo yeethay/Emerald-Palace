@@ -13,16 +13,17 @@ import {
   faChevronRight,
 } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
-import firebase from '@firebase/app';
-import '@firebase/storage';
 
-const Menu = (props: { menu?: IMenu }) => {
-  const { menu } = props;
+const Menu = (props: {
+  menu?: IMenu;
+  pdf?: string;
+  images?: { [key: string]: string };
+}) => {
+  const { menu, pdf, images } = props;
   const [language, setLanguage] = useState(Languages.ENGLISH);
   const [showBanner, setShowBanner] = useState(true);
   const [activeCategory, setActiveCategory] = useState<ICategory>();
   const sliderRef = useRef<HTMLDivElement>(null);
-  const [images, setImages] = useState<{ [key: string]: string }>({});
 
   const scroll = (amount: number) =>
     sliderRef.current?.scrollTo({
@@ -38,26 +39,6 @@ const Menu = (props: { menu?: IMenu }) => {
     document.title = 'Menu | Emerald Palace';
   }, []);
 
-  useEffect(() => {
-    const getImagesFromMenuJson = async () => {
-      const storage = firebase.storage!();
-      const storageRef = storage.ref();
-      menu?.categories.forEach(async (category) => {
-        const imageUrl = await storageRef
-          .child(category.image)
-          .getDownloadURL();
-        setImages((images) => {
-          return { ...images, [category.image]: imageUrl };
-        });
-      });
-    };
-    try {
-      getImagesFromMenuJson();
-    } catch (err) {
-      console.error(err);
-    }
-  }, [menu]);
-
   return (
     <div className={`menu ${showBanner && 'lower'}`}>
       <Banner
@@ -66,7 +47,7 @@ const Menu = (props: { menu?: IMenu }) => {
         message={menu?.delivery}
         tooltipMessages={menu?.discounts}
       />
-      <div className="languages">
+      <div className="options">
         <button
           className={`${language === Languages.ENGLISH && 'active'}`}
           onClick={() => setLanguage(Languages.ENGLISH)}
@@ -85,6 +66,10 @@ const Menu = (props: { menu?: IMenu }) => {
         >
           Tiếng Việt
         </button>
+        <div className="separator"></div>
+        <a href={pdf} target="_blank" rel="noopener noreferrer">
+          <button>PDF Version</button>
+        </a>
       </div>
       <div className="slider-container">
         <div className="left" onClick={() => scroll(-500)}>
@@ -98,7 +83,7 @@ const Menu = (props: { menu?: IMenu }) => {
                 className="category"
                 style={{
                   backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${
-                    images[category.image]
+                    images?.[category.image]
                   })`,
                   backgroundPosition: 'center',
                   backgroundSize: 'cover',
