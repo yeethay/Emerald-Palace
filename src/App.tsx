@@ -21,12 +21,12 @@ function App() {
 
   useEffect(() => {
     const filePaths = {
-      menuJson: process.env.REACT_APP_MENU_JSON_PATH as string,
-      menuPdf: process.env.REACT_APP_MENU_PDF_PATH as string,
-      takeoutMenuJson: process.env.REACT_APP_TAKEOUT_MENU_JSON_PATH as string,
-      takeoutMenuPdf: process.env.REACT_APP_TAKEOUT_MENU_PDF_PATH as string,
-      restaurantJson: process.env.REACT_APP_RESTAURANT_JSON_PATH as string,
-      backgroundImage: process.env.REACT_APP_BACKGROUND_IMAGE_PATH as string,
+      menuJson: 'menu.json',
+      menuPdf: 'pdfs/traditional-menu.pdf',
+      takeoutMenuJson: 'takeout-menu.json',
+      takeoutMenuPdf: 'pdfs/takeout-menu.pdf',
+      restaurantJson: 'restaurant.json',
+      backgroundImage: 'images/background.jpg',
     };
 
     const getAllFiles = async () => {
