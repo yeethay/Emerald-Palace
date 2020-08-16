@@ -5,9 +5,10 @@ import Home from './components/Home/Home';
 import Menu from './components/Menu/Menu';
 import TakeoutMenu from './components/Menu/TakeoutMenu';
 import Contact from './components/Contact/Contact';
-import './App.css';
 import FirebaseHelper from './FirebaseHelper';
 import { IMenu, IRestaurant, ICategory } from './types/types';
+import Loading from './components/Loading/Loading';
+import './App.css';
 
 function App() {
   const [ready, setReady] = useState(false);
@@ -99,7 +100,7 @@ function App() {
 
   return (
     <Router basename="/Emerald-Palace/">
-      {ready && (
+      {ready ? (
         <div className="app">
           <Navbar />
           <div className="main">
@@ -123,6 +124,8 @@ function App() {
             </Switch>
           </div>
         </div>
+      ) : (
+        <Loading />
       )}
     </Router>
   );
