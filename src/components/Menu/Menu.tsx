@@ -9,8 +9,9 @@ import {
   Languages,
 } from '../../types/types';
 import {
-  faChevronLeft,
-  faChevronRight,
+  faCar,
+  faMoneyBillAlt,
+  faCreditCard,
 } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 
@@ -40,92 +41,90 @@ const Menu = (props: {
   }, []);
 
   return (
-    <div className={`menu ${showBanner && 'lower'}`}>
-      <Banner
-        show={showBanner}
-        setShow={setShowBanner}
-        message={menu?.delivery}
-        tooltipMessages={menu?.discounts}
-      />
+    <div className="menu">
+      <div className="top"></div>
+      <div className="bottom"></div>
       <div className="options">
-        <button
-          className={`${language === Languages.ENGLISH && 'active'}`}
-          onClick={() => setLanguage(Languages.ENGLISH)}
-        >
-          English
+        <button onClick={() => setLanguage(Languages.ENGLISH)}>
+          {'en'.toUpperCase()}
         </button>
-        <button
-          className={`${language === Languages.CHINESE && 'active'}`}
-          onClick={() => setLanguage(Languages.CHINESE)}
-        >
-          繁體中文
+        <button onClick={() => setLanguage(Languages.CHINESE)}>
+          {'zh'.toUpperCase()}
         </button>
-        <button
-          className={`${language === Languages.VIETNAMESE && 'active'}`}
-          onClick={() => setLanguage(Languages.VIETNAMESE)}
-        >
-          Tiếng Việt
+        <button onClick={() => setLanguage(Languages.VIETNAMESE)}>
+          {'vi'.toUpperCase()}
         </button>
-        <div className="separator"></div>
-        <a href={pdf} target="_blank" rel="noopener noreferrer">
-          <button>PDF Version</button>
-        </a>
       </div>
-      <div className="slider-container">
-        <div className="left" onClick={() => scroll(-500)}>
-          <FontAwesomeIcon icon={faChevronLeft} size="lg" />
-        </div>
-        <div ref={sliderRef} className="slider">
-          {menu?.categories.map((category: ICategory, index) => {
-            return (
-              <div
-                key={index}
-                className="category"
-                style={{
-                  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${
-                    images?.[category.image]
-                  })`,
-                  backgroundPosition: 'center',
-                  backgroundSize: 'cover',
-                  backgroundRepeat: 'no-repeat',
-                }}
-                onClick={() => setActiveCategory(category)}
-              >
-                <span>{(category.name as IMultiLanguageString)[language]}</span>
-              </div>
-            );
-          })}
-        </div>
-        <div className="right" onClick={() => scroll(500)}>
-          <FontAwesomeIcon icon={faChevronRight} size="lg" />
-        </div>
+      <div className="left categories-list">
+        {menu?.categories.map((category: ICategory, index) => (
+          <a
+            href={`#${(category.name as IMultiLanguageString)[
+              language
+            ]?.toLowerCase()}`}
+          >
+            <div
+              className="category-selector"
+              style={{
+                backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(${
+                  images?.[category.image]
+                })`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+                backgroundRepeat: 'no-repeat',
+                width: '100%',
+                height: '20%',
+                borderTop: '1px solid #eee',
+              }}
+              onClick={() => setActiveCategory(category)}
+            >
+              {(category.name as IMultiLanguageString)[language]}
+            </div>
+          </a>
+        ))}
       </div>
-      <div className="active-category">
-        <div className="flex row">
-          {activeCategory && (
-            <h1>{(activeCategory?.name as IMultiLanguageString)[language]}</h1>
-          )}
-        </div>
-        {activeCategory?.description && (
-          <div className="description">
-            <span>{activeCategory?.description[language]}</span>
-          </div>
-        )}
+      <div className="right active-category">
         <table>
           <tbody>
-            {activeCategory?.items.map(
-              ({ number, name, price }: IItem, index) => (
-                <tr key={index}>
-                  <td className="number">{number}</td>
-                  <td className="name">
-                    <span>{(name as IMultiLanguageString)[language]}</span>
-                  </td>
-                  <td className="price">{price}</td>
-                </tr>
-              )
-            )}
+            <tr>
+              <td>
+                <FontAwesomeIcon icon={faCar} />
+              </td>
+              <td>{menu?.delivery}</td>
+            </tr>
+            {menu?.discounts.map((discount) => (
+              <tr>
+                <td>
+                  <FontAwesomeIcon
+                    icon={
+                      discount.includes('cash') ? faMoneyBillAlt : faCreditCard
+                    }
+                  />
+                </td>
+                <td>{discount}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
+        {menu?.categories.map((category) => (
+          <a
+            id={`${(category.name as IMultiLanguageString)[
+              language
+            ]?.toLowerCase()}`}
+          >
+            <h1>{(category.name as IMultiLanguageString)[language]}</h1>
+            <table className="menu-items">
+              <tbody>
+                {category.items.map(({ number, name, price }) => (
+                  <tr>
+                    <td style={{ width: '60px' }}>{number}</td>
+                    <td>{(name as IMultiLanguageString)[language]}</td>
+                    <td style={{ textAlign: 'right' }}>{price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </a>
+        ))}
       </div>
     </div>
   );

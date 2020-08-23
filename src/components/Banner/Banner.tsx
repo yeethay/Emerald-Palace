@@ -19,17 +19,20 @@ const Banner = (props: IProps) => {
   return message ? (
     <div className={`banner ${!show && 'dismissed'}`}>
       <div onMouseEnter={toggleTooltip} onMouseLeave={toggleTooltip}>
-        <FontAwesomeIcon icon={faInfoCircle} />
-        <div className={`tooltip ${tooltipHidden && 'hidden'}`}>
+        {/* <FontAwesomeIcon icon={faInfoCircle} /> */}
+        {/* <div className={`tooltip ${tooltipHidden && 'hidden'}`}>
           {tooltipMessages?.map((message, index) => (
             <li key={index}>{message}</li>
           ))}
-        </div>
+        </div> */}
       </div>
       <div className="message">{message}</div>
-      <div className="close" onClick={() => setShow(false)}>
+      {tooltipMessages?.map((message) => (
+        <div>{message}</div>
+      ))}
+      {/* <div className="close" onClick={() => setShow(false)}>
         ✕
-      </div>
+      </div> */}
     </div>
   ) : null;
 };

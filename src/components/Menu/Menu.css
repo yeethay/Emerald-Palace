@@ -1,158 +1,48 @@
 .menu {
-  padding: 50px;
-}
-
-.menu table {
-  width: 100%;
-  font-size: 1.2em;
-  margin: 10px 0;
-}
-
-.menu h1 {
-  margin-bottom: 0;
-}
-
-.menu th {
-  text-align: left;
-}
-
-.menu tr {
-  transition: 0.2s;
-}
-
-.menu tr:hover > :not(th) {
-  color: #27864a;
-  transition: 0.2s;
-}
-
-.menu td .description {
-  font-size: 0.8em;
-}
-
-.menu .active-category .description {
   display: flex;
-  flex-direction: column;
-}
-
-.active-category h1 {
-  line-height: 30px;
-  margin: 20px 0;
-}
-
-.active-category .flex.row > *:not(:last-child):after {
-  content: '\00a0•\00a0';
-}
-
-.menu .options {
-  display: flex;
-  justify-content: space-evenly;
-  border: 1px solid #eee;
+  flex-direction: row;
+  position: inherit;
   border-radius: 5px;
-  padding: 10px 5px;
-  margin: auto;
-  width: fit-content;
-  text-align: center;
 }
 
-.menu .options button {
-  background-color: #eee;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-  margin: 0 5px;
-}
-
-.menu .options button.active {
-  background-color: #3c925b;
-  color: #fff;
-  transition: 0.5s;
-}
-
-.menu .options button:hover {
-  filter: brightness(85%);
-}
-
-.menu .options .separator {
-  border-left: 1px solid #eee;
-  margin: 0 5px;
-}
-
-.menu .slider-container {
-  margin: 10px 0;
-  top: 5%;
-  bottom: 76%;
-  left: 0;
+.menu > .options {
+  position: absolute;
   right: 0;
-  height: 15vh;
-  display: flex;
-  flex-direction: row;
 }
 
-.menu .slider-container .left,
-.menu .slider-container .right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin: 0 20px;
-}
-
-.menu .slider {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(15, minmax(240px, 1fr));
-  overflow: scroll;
+.menu > .left {
+  width: 100%;
   height: 100%;
-  scrollbar-width: none;
-  font-size: 1.2em;
+  flex: 0 0 25%;
+  overflow: auto;
 }
 
-.menu .slider::-webkit-scrollbar {
-  display: none;
+.menu > .right {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 75%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 }
 
-.menu .slider > * {
-  border-radius: 10px;
+.menu > .categories-list > a > .category-selector {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: #fff;
   cursor: pointer;
-  color: white;
 }
 
-.menu .active-category {
-  margin: auto 8%;
+.menu > .right.active-category {
+  padding: 30px 60px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
 }
 
-.menu tr td.number {
-  width: 50px;
-  padding-top: 0;
-}
-
-.menu tr td.name {
-  padding: 5px 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu tr td.price {
-  text-align: right;
-}
-
-.category {
-  display: flex;
-  flex-direction: column;
-}
-
-.category > * {
-  text-align: center;
-}
-
-.flex.row {
-  display: flex;
-  flex-direction: row;
+.menu > .right table.menu-items {
+  width: 100%;
 }
 
 @media screen and (max-width: 800px) {
