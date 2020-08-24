@@ -34,12 +34,12 @@ const TakeoutMenu = (props: {
 
   return (
     <div className={`menu ${showBanner && 'lower'}`}>
-      <Banner
+      {/* <Banner
         show={showBanner}
         setShow={setShowBanner}
         message={menu?.delivery}
         tooltipMessages={menu?.discounts}
-      ></Banner>
+      ></Banner> */}
       <div className="options">
         <a href={pdf} target="_blank" rel="noopener noreferrer">
           <button>PDF Version</button>

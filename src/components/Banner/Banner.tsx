@@ -1,40 +1,35 @@
-import React, { useState, Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCar,
+  faMoneyBillAlt,
+  faCreditCard,
+} from '@fortawesome/free-solid-svg-icons';
 import './Banner.css';
 
 interface IProps {
-  show: boolean;
-  setShow: Dispatch<SetStateAction<boolean>>;
-  message?: string;
-  tooltipMessages?: string[];
+  delivery?: string;
+  cash?: string;
+  card?: string;
+  info?: string;
 }
 
 const Banner = (props: IProps) => {
-  const [tooltipHidden, setTooltipHidden] = useState(true);
-  const { show, setShow, message, tooltipMessages } = props;
+  const { delivery, cash, card, info } = props;
 
-  const toggleTooltip = () => setTooltipHidden(!tooltipHidden);
-
-  return message ? (
-    <div className={`banner ${!show && 'dismissed'}`}>
-      <div onMouseEnter={toggleTooltip} onMouseLeave={toggleTooltip}>
-        {/* <FontAwesomeIcon icon={faInfoCircle} /> */}
-        {/* <div className={`tooltip ${tooltipHidden && 'hidden'}`}>
-          {tooltipMessages?.map((message, index) => (
-            <li key={index}>{message}</li>
-          ))}
-        </div> */}
+  return (
+    <div className="banner">
+      <div>
+        <FontAwesomeIcon icon={faCar} /> {delivery}
       </div>
-      <div className="message">{message}</div>
-      {tooltipMessages?.map((message) => (
-        <div>{message}</div>
-      ))}
-      {/* <div className="close" onClick={() => setShow(false)}>
-        ✕
-      </div> */}
+      <div>
+        <FontAwesomeIcon icon={faMoneyBillAlt} /> {cash}
+      </div>
+      <div>
+        <FontAwesomeIcon icon={faCreditCard} /> {card}
+      </div>
     </div>
-  ) : null;
+  );
 };
 
 export default Banner;

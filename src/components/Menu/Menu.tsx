@@ -1,18 +1,13 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Banner from '../Banner/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   ICategory,
-  IItem,
   IMenu,
   IMultiLanguageString,
   Languages,
 } from '../../types/types';
-import {
-  faCar,
-  faMoneyBillAlt,
-  faCreditCard,
-} from '@fortawesome/free-solid-svg-icons';
+import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
 import './Menu.css';
 
 const Menu = (props: {
@@ -22,44 +17,49 @@ const Menu = (props: {
 }) => {
   const { menu, pdf, images } = props;
   const [language, setLanguage] = useState(Languages.ENGLISH);
-  const [showBanner, setShowBanner] = useState(true);
-  const [activeCategory, setActiveCategory] = useState<ICategory>();
-  const sliderRef = useRef<HTMLDivElement>(null);
-
-  const scroll = (amount: number) =>
-    sliderRef.current?.scrollTo({
-      left: sliderRef.current.scrollLeft + amount,
-      behavior: 'smooth',
-    });
-
-  useEffect(() => {
-    setActiveCategory(menu?.categories[0]);
-  }, [menu]);
 
   useEffect(() => {
     document.title = 'Menu | Emerald Palace';
   }, []);
 
+  interface ILanguageToggle {
+    label: string;
+    identifier: Languages;
+  }
+
+  const LanguageToggle = ({ label, identifier }: ILanguageToggle) => (
+    <button
+      className={`language-toggle ${language === identifier && 'active'}`}
+      onClick={() => setLanguage(identifier)}
+    >
+      {label}
+    </button>
+  );
+
   return (
     <div className="menu">
-      <div className="top"></div>
-      <div className="bottom"></div>
+      <Banner
+        delivery={menu?.discounts.delivery}
+        cash={menu?.discounts.cash}
+        card={menu?.discounts.card}
+        info={menu?.discounts.info}
+      />
       <div className="options">
-        <button onClick={() => setLanguage(Languages.ENGLISH)}>
-          {'en'.toUpperCase()}
-        </button>
-        <button onClick={() => setLanguage(Languages.CHINESE)}>
-          {'zh'.toUpperCase()}
-        </button>
-        <button onClick={() => setLanguage(Languages.VIETNAMESE)}>
-          {'vi'.toUpperCase()}
-        </button>
+        <LanguageToggle label="English" identifier={Languages.ENGLISH} />
+        <LanguageToggle label="繁體中文" identifier={Languages.CHINESE} />
+        <LanguageToggle label="Tiếng Việt" identifier={Languages.VIETNAMESE} />
+        <a href={pdf} target="_blank" rel="noopener noreferrer">
+          <button>
+            <FontAwesomeIcon icon={faExternalLinkAlt} /> PDF Version
+          </button>
+        </a>
       </div>
       <div className="left categories-list">
         {menu?.categories.map((category: ICategory, index) => (
           <a
+            key={index}
             href={`#${(category.name as IMultiLanguageString)[
-              language
+              Languages.ENGLISH
             ]?.toLowerCase()}`}
           >
             <div
@@ -71,54 +71,31 @@ const Menu = (props: {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
                 backgroundRepeat: 'no-repeat',
-                width: '100%',
-                height: '20%',
-                borderTop: '1px solid #eee',
               }}
-              onClick={() => setActiveCategory(category)}
             >
               {(category.name as IMultiLanguageString)[language]}
             </div>
           </a>
         ))}
       </div>
-      <div className="right active-category">
-        <table>
-          <tbody>
-            <tr>
-              <td>
-                <FontAwesomeIcon icon={faCar} />
-              </td>
-              <td>{menu?.delivery}</td>
-            </tr>
-            {menu?.discounts.map((discount) => (
-              <tr>
-                <td>
-                  <FontAwesomeIcon
-                    icon={
-                      discount.includes('cash') ? faMoneyBillAlt : faCreditCard
-                    }
-                  />
-                </td>
-                <td>{discount}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        {menu?.categories.map((category) => (
+      <div className="right">
+        {menu?.categories.map((category, index) => (
           <a
+            key={index}
             id={`${(category.name as IMultiLanguageString)[
-              language
+              Languages.ENGLISH
             ]?.toLowerCase()}`}
           >
             <h1>{(category.name as IMultiLanguageString)[language]}</h1>
             <table className="menu-items">
               <tbody>
-                {category.items.map(({ number, name, price }) => (
-                  <tr>
-                    <td style={{ width: '60px' }}>{number}</td>
-                    <td>{(name as IMultiLanguageString)[language]}</td>
-                    <td style={{ textAlign: 'right' }}>{price}</td>
+                {category.items.map(({ number, name, price }, index) => (
+                  <tr key={index}>
+                    <td className="item-number">{number}</td>
+                    <td className="item-name">
+                      {(name as IMultiLanguageString)[language]}
+                    </td>
+                    <td className="item-price">{price}</td>
                   </tr>
                 ))}
               </tbody>
