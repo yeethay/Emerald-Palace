@@ -72,6 +72,10 @@
   width: 60px;
 }
 
+.menu > .right table.menu-items .item-name > .item-description {
+  font-size: 0.8em;
+}
+
 .menu > .right table.menu-items .item-price {
   text-align: right;
 }

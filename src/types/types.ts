@@ -18,10 +18,15 @@ export interface IItem {
   price: string | string[];
 }
 
+export interface IDiscountWithNote {
+  description: string;
+  note: string;
+}
+
 export interface IDiscounts {
   delivery: string;
-  cash: string;
-  card: string;
+  cash: string | IDiscountWithNote;
+  card: string | IDiscountWithNote;
   info?: string;
 }
 

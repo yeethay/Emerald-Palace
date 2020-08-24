@@ -11,3 +11,8 @@
   justify-content: space-evenly;
   align-items: center;
 }
+
+.banner .note {
+  font-size: 0.8em;
+  text-align: center;
+}

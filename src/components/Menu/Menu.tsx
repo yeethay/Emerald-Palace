@@ -42,7 +42,6 @@ const Menu = (props: {
         delivery={menu?.discounts.delivery}
         cash={menu?.discounts.cash}
         card={menu?.discounts.card}
-        info={menu?.discounts.info}
       />
       <div className="options">
         <LanguageToggle label="English" identifier={Languages.ENGLISH} />
