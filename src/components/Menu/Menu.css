@@ -4,6 +4,7 @@
   position: inherit;
   border-radius: 5px;
   overflow: hidden;
+  margin: 5% 15%;
 }
 
 .menu > .options {
@@ -30,7 +31,7 @@
   background-color: #3c925b;
 }
 
-.menu > .left {
+.menu > .left.categories-list {
   width: 100%;
   height: 100%;
   flex: 0 0 25%;
@@ -80,38 +81,76 @@
   text-align: right;
 }
 
+.menu .deals-toggle {
+  display: none;
+}
+
 @media screen and (max-width: 800px) {
-  .menu h1 {
-    font-size: 1.5em;
+  .menu {
+    margin: 0 !important;
+    padding: 0 !important;
+    flex-direction: column;
+    border-radius: 0 !important;
   }
 
-  .menu .slider-container .slider {
+  .menu > .left.categories-list {
+    display: grid;
+    gap: 1px;
     grid-template-columns: repeat(15, minmax(200px, 1fr));
-    font-size: 1em;
+    overflow: scroll;
+    height: 100%;
+    scrollbar-width: none;
+    font-size: 1.2em;
+    overflow-y: hidden;
+    flex: 0 0 20%;
   }
 
-  .menu table {
-    font-size: 0.8rem;
+  .menu > .categories-list > a > .category-selector {
+    height: 100%;
   }
 
-  .menu .slider-container .left,
-  .menu .slider-container .right {
+  .menu > .options {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .menu > .options button {
+    margin: 0;
+    flex: 1;
+  }
+
+  .banner {
     display: none;
+    position: absolute;
+    height: fit-content;
+    bottom: 40px;
+    top: unset;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 13px;
   }
 
-  .menu tr td.number {
+  .banner.show {
+    display: block;
+  }
+
+  .menu > .right {
+    padding: 10px;
+    font-size: 14px;
+    flex: 0 0 80%;
+  }
+
+  .menu > .right table.menu-items .item-number {
     width: 30px;
   }
 
-  .menu .active-category {
-    margin: 0;
-  }
-
-  .menu .description {
-    font-size: 0.8em;
-  }
-
-  .menu.lower {
-    margin-top: 40px;
+  .menu > .options button.deals-toggle {
+    display: block;
+    background-color: orange;
   }
 }

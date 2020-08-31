@@ -10,16 +10,17 @@ import './Banner.css';
 import { IDiscountWithNote } from '../../types/types';
 
 interface IProps {
+  className?: string;
   delivery?: string;
   cash?: string | IDiscountWithNote;
   card?: string | IDiscountWithNote;
 }
 
 const Banner = (props: IProps) => {
-  const { delivery, cash, card } = props;
+  const { className, delivery, cash, card } = props;
 
   return (
-    <div className="banner">
+    <div className={`banner ${className}`}>
       <BannerItem description={delivery} icon={faCar} />
       <BannerItem
         description={

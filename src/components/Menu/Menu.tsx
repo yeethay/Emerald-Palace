@@ -17,6 +17,7 @@ const Menu = (props: {
 }) => {
   const { menu, pdf, images } = props;
   const [language, setLanguage] = useState(Languages.ENGLISH);
+  const [showBannerOnMobile, setShowBannerOnMobile] = useState(false);
 
   useEffect(() => {
     document.title = 'Menu | Emerald Palace';
@@ -39,17 +40,24 @@ const Menu = (props: {
   return (
     <div className="menu">
       <Banner
+        className={showBannerOnMobile ? 'show' : ''}
         delivery={menu?.discounts.delivery}
         cash={menu?.discounts.cash}
         card={menu?.discounts.card}
       />
       <div className="options">
+        <button
+          className="deals-toggle"
+          onClick={() => setShowBannerOnMobile(!showBannerOnMobile)}
+        >
+          Deals
+        </button>
         <LanguageToggle label="English" identifier={Languages.ENGLISH} />
         <LanguageToggle label="繁體中文" identifier={Languages.CHINESE} />
         <LanguageToggle label="Tiếng Việt" identifier={Languages.VIETNAMESE} />
         <a href={pdf} target="_blank" rel="noopener noreferrer">
           <button>
-            <FontAwesomeIcon icon={faExternalLinkAlt} /> PDF Version
+            <FontAwesomeIcon icon={faExternalLinkAlt} /> PDF
           </button>
         </a>
       </div>
@@ -79,13 +87,18 @@ const Menu = (props: {
       </div>
       <div className="right">
         {menu?.categories.map((category, index) => (
-          <a
-            key={index}
-            id={`${(category.name as IMultiLanguageString)[
-              Languages.ENGLISH
-            ]?.toLowerCase()}`}
-          >
-            <h1>{(category.name as IMultiLanguageString)[language]}</h1>
+          <div key={index}>
+            <a
+              key={index}
+              id={`${(category.name as IMultiLanguageString)[
+                Languages.ENGLISH
+              ]?.toLowerCase()}`}
+              href={`#${(category.name as IMultiLanguageString)[
+                Languages.ENGLISH
+              ]?.toLowerCase()}`}
+            >
+              <h1>{(category.name as IMultiLanguageString)[language]}</h1>
+            </a>
             <table className="menu-items">
               <tbody>
                 {category.items.map(({ number, name, price }, index) => (
@@ -99,7 +112,7 @@ const Menu = (props: {
                 ))}
               </tbody>
             </table>
-          </a>
+          </div>
         ))}
       </div>
     </div>

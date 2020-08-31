@@ -51,8 +51,10 @@ const TakeoutMenu = (props: {
       </div>
       <div className="right">
         {menu?.categories.map((category, index) => (
-          <a key={index} id={`${category.name}`}>
-            <h1>{category.name}</h1>
+          <div key={index}>
+            <a id={`${category.name}`} href={`#${category.name}`}>
+              <h1>{category.name}</h1>
+            </a>
             <table className="menu-items">
               <tbody>
                 {category.name === 'Soup' && (
@@ -100,7 +102,7 @@ const TakeoutMenu = (props: {
                 </table>
               </>
             )}
-          </a>
+          </div>
         ))}
       </div>
     </div>
