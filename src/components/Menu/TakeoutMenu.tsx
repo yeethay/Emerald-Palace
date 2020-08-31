@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ICategory, IEntree, IMenu } from '../../types/types';
@@ -11,6 +11,7 @@ const TakeoutMenu = (props: {
   images?: { [key: string]: string };
 }) => {
   const { menu, pdf, images } = props;
+  const [showBannerOnMobile, setShowBannerOnMobile] = useState(false);
 
   useEffect(() => {
     document.title = 'Takeout Menu | Emerald Palace';
@@ -19,14 +20,21 @@ const TakeoutMenu = (props: {
   return (
     <div className="menu">
       <Banner
+        className={showBannerOnMobile ? 'show' : ''}
         delivery={menu?.discounts.delivery}
         cash={menu?.discounts.cash}
         card={menu?.discounts.card}
       />
       <div className="options">
+        <button
+          className="deals-toggle"
+          onClick={() => setShowBannerOnMobile(!showBannerOnMobile)}
+        >
+          Deals
+        </button>
         <a href={pdf} target="_blank" rel="noopener noreferrer">
           <button>
-            <FontAwesomeIcon icon={faExternalLinkAlt} /> PDF Version
+            <FontAwesomeIcon icon={faExternalLinkAlt} /> PDF
           </button>
         </a>
       </div>
