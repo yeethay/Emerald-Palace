@@ -7,47 +7,30 @@ import {
   IconDefinition,
 } from '@fortawesome/free-solid-svg-icons';
 import './Banner.css';
-import { IDiscountWithNote } from '../../types/types';
+import { IDiscount } from '../../types/types';
 
 interface IProps {
   className?: string;
-  delivery?: string;
-  cash?: string | IDiscountWithNote;
-  card?: string | IDiscountWithNote;
+  discounts?: IDiscount[];
 }
 
 const Banner = (props: IProps) => {
-  const { className, delivery, cash, card } = props;
+  const { className, discounts } = props;
+  const icons: { [key: string]: IconDefinition } = {
+    delivery: faCar,
+    cash: faMoneyBillAlt,
+    card: faCreditCard,
+  };
 
   return (
     <div className={`banner ${className}`}>
-      <BannerItem description={delivery} icon={faCar} />
-      <BannerItem
-        description={
-          typeof cash === 'string'
-            ? cash
-            : (cash as IDiscountWithNote)?.description
-        }
-        note={
-          typeof cash === 'string'
-            ? undefined
-            : (cash as IDiscountWithNote)?.note
-        }
-        icon={faMoneyBillAlt}
-      />
-      <BannerItem
-        description={
-          typeof card === 'string'
-            ? card
-            : (card as IDiscountWithNote)?.description
-        }
-        note={
-          typeof card === 'string'
-            ? undefined
-            : (card as IDiscountWithNote)?.note
-        }
-        icon={faCreditCard}
-      />
+      {discounts?.map((discount) => (
+        <BannerItem
+          description={discount.description}
+          icon={icons[discount.name]}
+          note={discount.note}
+        />
+      ))}
     </div>
   );
 };

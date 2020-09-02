@@ -21,9 +21,7 @@ const TakeoutMenu = (props: {
     <div className="menu">
       <Banner
         className={showBannerOnMobile ? 'show' : ''}
-        delivery={menu?.discounts.delivery}
-        cash={menu?.discounts.cash}
-        card={menu?.discounts.card}
+        discounts={menu?.discounts}
       />
       <div className="options">
         <button

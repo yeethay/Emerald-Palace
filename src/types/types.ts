@@ -18,20 +18,14 @@ export interface IItem {
   price: string | string[];
 }
 
-export interface IDiscountWithNote {
+export interface IDiscount {
+  name: string;
   description: string;
-  note: string;
-}
-
-export interface IDiscounts {
-  delivery: string;
-  cash: string | IDiscountWithNote;
-  card: string | IDiscountWithNote;
-  info?: string;
+  note?: string;
 }
 
 export interface IMenu {
-  discounts: IDiscounts;
+  discounts: IDiscount[];
   categories: ICategory[];
 }
 
