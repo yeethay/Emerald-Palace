@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Emerald-Palace/precache-manifest.56d137df1f7c17630d5e66da20e10ae8.js"
+  "/Emerald-Palace/precache-manifest.4be879728ebb2b655b1ba7c5f3f9ca7b.js"
 );
 
 self.addEventListener('message', (event) => {
