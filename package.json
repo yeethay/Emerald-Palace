@@ -2,7 +2,7 @@
   "name": "emerald-palace",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YYC-HALT.github.io/Emerald-Palace",
+  "homepage": "https://fouronesixnine.github.io/Emerald-Palace",
   "dependencies": {
     "@firebase/app": "^0.6.8",
     "@firebase/storage": "^0.3.38",
