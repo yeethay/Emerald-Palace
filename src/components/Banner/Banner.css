@@ -16,3 +16,26 @@
   font-size: 0.8em;
   text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+  .banner {
+    display: none;
+    position: absolute;
+    height: fit-content;
+    bottom: 40px;
+    top: unset;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    font-size: 13px;
+  }
+
+  .banner.show {
+    display: block;
+  }
+
+  .banner .note {
+    text-align: left;
+  }
+}

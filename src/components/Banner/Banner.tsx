@@ -24,8 +24,9 @@ const Banner = (props: IProps) => {
 
   return (
     <div className={`banner ${className}`}>
-      {discounts?.map((discount) => (
+      {discounts?.map((discount, index) => (
         <BannerItem
+          key={index}
           description={discount.description}
           icon={icons[discount.name]}
           note={discount.note}

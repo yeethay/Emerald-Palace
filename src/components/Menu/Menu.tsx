@@ -59,7 +59,7 @@ const Menu = (props: {
           </button>
         </a>
       </div>
-      <div className="left categories-list">
+      <div className="categories-list">
         {menu?.categories.map((category: ICategory, index) => (
           <a
             key={index}
@@ -83,7 +83,7 @@ const Menu = (props: {
           </a>
         ))}
       </div>
-      <div className="right">
+      <div className="menu-section">
         {menu?.categories.map((category, index) => (
           <div key={index}>
             <a

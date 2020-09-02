@@ -36,7 +36,7 @@ const TakeoutMenu = (props: {
           </button>
         </a>
       </div>
-      <div className="left categories-list">
+      <div className="categories-list">
         {menu?.categories.map((category: ICategory, index) => (
           <a key={index} href={`#${category.name}`}>
             <div
@@ -55,7 +55,7 @@ const TakeoutMenu = (props: {
           </a>
         ))}
       </div>
-      <div className="right">
+      <div className="menu-section">
         {menu?.categories.map((category, index) => (
           <div key={index}>
             <a id={`${category.name}`} href={`#${category.name}`}>
