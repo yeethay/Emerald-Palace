@@ -1,192 +1,150 @@
 .menu {
-  padding: 50px;
+  display: flex;
+  flex-direction: row;
+  position: inherit;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 5% 15%;
+  background-color: #efefef;
 }
 
-.menu table {
+.menu > .options {
+  position: absolute;
+  right: 0;
+}
+
+.menu > .options button {
+  width: fit-content;
+  height: fit-content;
+  line-height: 20px;
+  padding: 10px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  border: 0;
+}
+
+.menu > .options button:hover {
+  background-color: #000;
+}
+
+.menu > .options > button.active {
+  background-color: #3c925b;
+}
+
+.menu > .categories-list {
   width: 100%;
-  font-size: 1.2em;
-  margin: 10px 0;
+  height: 100%;
+  flex: 0 0 25%;
+  overflow: auto;
 }
 
-.menu h1 {
-  margin-bottom: 0;
+.menu > .menu-section {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 75%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 60px;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box; /* Firefox, other Gecko */
+  box-sizing: border-box; /* Opera/IE 8+ */
 }
 
-.menu th {
-  text-align: left;
+.menu > .categories-list > a > .category-selector {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+  height: 22%;
+  border-top: 1px solid #eee;
 }
 
-.menu tr {
-  transition: 0.2s;
+.menu > .menu-section h1 {
+  display: inline-block;
 }
 
-.menu tr:hover > :not(th) {
-  color: #27864a;
-  transition: 0.2s;
+.menu > .menu-section table.menu-items {
+  width: 100%;
 }
 
-.menu td .description {
+.menu > .menu-section table.menu-items .item-number {
+  width: 60px;
+}
+
+.menu > .menu-section table.menu-items .item-name > .item-description {
   font-size: 0.8em;
 }
 
-.menu .active-category .description {
-  display: flex;
-  flex-direction: column;
-}
-
-.active-category h1 {
-  line-height: 30px;
-  margin: 20px 0;
-}
-
-.active-category .flex.row > *:not(:last-child):after {
-  content: '\00a0•\00a0';
-}
-
-.menu .options {
-  display: flex;
-  justify-content: space-evenly;
-  border: 1px solid #eee;
-  border-radius: 5px;
-  padding: 10px 5px;
-  margin: auto;
-  width: fit-content;
-  text-align: center;
-}
-
-.menu .options button {
-  background-color: #eee;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.5s;
-  margin: 0 5px;
-}
-
-.menu .options button.active {
-  background-color: #3c925b;
-  color: #fff;
-  transition: 0.5s;
-}
-
-.menu .options button:hover {
-  filter: brightness(85%);
-}
-
-.menu .options .separator {
-  border-left: 1px solid #eee;
-  margin: 0 5px;
-}
-
-.menu .slider-container {
-  margin: 10px 0;
-  top: 5%;
-  bottom: 76%;
-  left: 0;
-  right: 0;
-  height: 15vh;
-  display: flex;
-  flex-direction: row;
-}
-
-.menu .slider-container .left,
-.menu .slider-container .right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  margin: 0 20px;
-}
-
-.menu .slider {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(15, minmax(240px, 1fr));
-  overflow: scroll;
-  height: 100%;
-  scrollbar-width: none;
-  font-size: 1.2em;
-}
-
-.menu .slider::-webkit-scrollbar {
-  display: none;
-}
-
-.menu .slider > * {
-  border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: white;
-}
-
-.menu .active-category {
-  margin: auto 8%;
-}
-
-.menu tr td.number {
-  width: 50px;
-  padding-top: 0;
-}
-
-.menu tr td.name {
-  padding: 5px 0;
-  display: flex;
-  flex-direction: column;
-}
-
-.menu tr td.price {
+.menu > .menu-section table.menu-items .item-price {
   text-align: right;
 }
 
-.category {
-  display: flex;
-  flex-direction: column;
-}
-
-.category > * {
-  text-align: center;
-}
-
-.flex.row {
-  display: flex;
-  flex-direction: row;
+.menu .deals-toggle {
+  display: none;
 }
 
 @media screen and (max-width: 800px) {
-  .menu h1 {
-    font-size: 1.5em;
+  .menu {
+    margin: 0 !important;
+    padding: 0 0 40px 0 !important;
+    flex-direction: column;
+    border-radius: 0 !important;
   }
 
-  .menu .slider-container .slider {
+  .menu > .categories-list {
+    display: grid;
+    gap: 1px;
     grid-template-columns: repeat(15, minmax(200px, 1fr));
-    font-size: 1em;
+    overflow: scroll;
+    height: 100%;
+    scrollbar-width: none;
+    font-size: 1.2em;
+    overflow-y: hidden;
+    flex: 0 0 20%;
   }
 
-  .menu table {
-    font-size: 0.8rem;
+  .menu > .categories-list > a > .category-selector {
+    height: 100%;
+    text-align: center;
   }
 
-  .menu .slider-container .left,
-  .menu .slider-container .right {
-    display: none;
+  .menu > .options {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
   }
 
-  .menu tr td.number {
+  .menu > .options button,
+  .menu > .options a {
+    margin: 0;
+    flex: 1;
+    width: 100%;
+  }
+
+  .menu > .options a {
+    margin: 0;
+    flex: 1;
+    width: 100%;
+  }
+
+  .menu > .menu-section {
+    padding: 10px;
+    font-size: 14px;
+    flex: 0 0 80%;
+  }
+
+  .menu > .menu-section table.menu-items .item-number {
     width: 30px;
   }
 
-  .menu .active-category {
-    margin: 0;
-  }
-
-  .menu .description {
-    font-size: 0.8em;
-  }
-
-  .menu.lower {
-    margin-top: 40px;
+  .menu > .options button.deals-toggle {
+    display: block;
+    background-color: orange;
   }
 }

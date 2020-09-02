@@ -1,37 +1,56 @@
-import React, { useState, Dispatch, SetStateAction } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import {
+  faCar,
+  faMoneyBillAlt,
+  faCreditCard,
+  IconDefinition,
+} from '@fortawesome/free-solid-svg-icons';
 import './Banner.css';
+import { IDiscount } from '../../types/types';
 
 interface IProps {
-  show: boolean;
-  setShow: Dispatch<SetStateAction<boolean>>;
-  message?: string;
-  tooltipMessages?: string[];
+  className?: string;
+  discounts?: IDiscount[];
 }
 
 const Banner = (props: IProps) => {
-  const [tooltipHidden, setTooltipHidden] = useState(true);
-  const { show, setShow, message, tooltipMessages } = props;
+  const { className, discounts } = props;
+  const icons: { [key: string]: IconDefinition } = {
+    delivery: faCar,
+    cash: faMoneyBillAlt,
+    card: faCreditCard,
+  };
 
-  const toggleTooltip = () => setTooltipHidden(!tooltipHidden);
-
-  return message ? (
-    <div className={`banner ${!show && 'dismissed'}`}>
-      <div onMouseEnter={toggleTooltip} onMouseLeave={toggleTooltip}>
-        <FontAwesomeIcon icon={faInfoCircle} />
-        <div className={`tooltip ${tooltipHidden && 'hidden'}`}>
-          {tooltipMessages?.map((message, index) => (
-            <li key={index}>{message}</li>
-          ))}
-        </div>
-      </div>
-      <div className="message">{message}</div>
-      <div className="close" onClick={() => setShow(false)}>
-        ✕
-      </div>
+  return (
+    <div className={`banner ${className}`}>
+      {discounts?.map((discount, index) => (
+        <BannerItem
+          key={index}
+          description={discount.description}
+          icon={icons[discount.name]}
+          note={discount.note}
+        />
+      ))}
     </div>
-  ) : null;
+  );
 };
+
+const BannerItem = ({
+  icon,
+  description,
+  note,
+}: {
+  icon: IconDefinition;
+  description?: string;
+  note?: string;
+}) => (
+  <div>
+    <div>
+      <FontAwesomeIcon icon={icon} /> {description}
+    </div>
+    {note && <div className="note">{`*${note}`}</div>}
+  </div>
+);
 
 export default Banner;

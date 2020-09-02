@@ -2,6 +2,8 @@ import React, { useRef, useEffect } from 'react';
 import './Contact.css';
 import { Location } from '../../types/types';
 import { IRestaurant } from '../../types/types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMapPin, faPhone, faClock } from '@fortawesome/free-solid-svg-icons';
 
 declare global {
   interface Window {
@@ -57,40 +59,40 @@ const Contact = (props: { restaurant?: IRestaurant }) => {
 
   return (
     <div className="contact">
-      <h2>CONTACT US</h2>
-      <div className="desktop">
-        <div className="google-map" ref={googleMapRef} />
+      <h1>CONTACT US</h1>
+      <div className="container">
         <div className="contact-info">
-          <div className="section">
-            <h3>LOCATION</h3>
+          <section className="location">
+            <h2>
+              <FontAwesomeIcon icon={faMapPin} /> Location
+            </h2>
             <a href={restaurant?.location.href}>
-              {restaurant?.location.address.split(',').map((line, index) => (
-                <span key={index} className="address">
-                  {line}
-                </span>
-              ))}
+              {restaurant?.location.address}
             </a>
-          </div>
-          <div className="section">
-            <h3>PHONE</h3>
+          </section>
+          <section className="phone">
+            <h2>
+              <FontAwesomeIcon icon={faPhone} /> Phone
+            </h2>
             <a href={restaurant?.phone.href}>{restaurant?.phone.label}</a>
-          </div>
-          <div className="section">
-            <h3>HOURS</h3>
-            <div className="times">
-              <ul className="days">
+          </section>
+          <section className="hours">
+            <h2>
+              <FontAwesomeIcon icon={faClock} /> Hours
+            </h2>
+            <table>
+              <tbody>
                 {restaurant?.hours.map((item, index) => (
-                  <li key={index}>{item.day}</li>
+                  <tr key={index}>
+                    <td className="day">{item.day}</td>
+                    <td>{item.hours}</td>
+                  </tr>
                 ))}
-              </ul>
-              <ul className="hours">
-                {restaurant?.hours.map((item, index) => (
-                  <li key={index}>{item.hours}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
+              </tbody>
+            </table>
+          </section>
         </div>
+        <div className="google-map" ref={googleMapRef} />
       </div>
     </div>
   );
