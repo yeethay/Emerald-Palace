@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f5bffaa8f3af3207cc6173296237f966",
+    "revision": "0b586c83cc2082d698818ae4560669b6",
     "url": "/Emerald-Palace/index.html"
   },
   {
