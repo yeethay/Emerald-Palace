@@ -13,14 +13,14 @@ code {
 
 @font-face {
   font-family: 'Noto';
-  src: url(/Emerald-Palace/fonts/NotoSerifTC-Light.woff2);
+  src: url(/fonts/NotoSerifTC-Light.woff2);
   font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'OpenSans';
-  src: url(/Emerald-Palace/fonts/OpenSans-Light.ttf);
+  src: url(/fonts/OpenSans-Light.ttf);
   font-weight: 900;
   font-style: normal;
 }
