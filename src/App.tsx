@@ -99,7 +99,7 @@ function App() {
   }, [menu, takeoutMenu]);
 
   return (
-    <Router basename="/Emerald-Palace/">
+    <Router>
       {ready ? (
         <div className="app">
           <Navbar />
